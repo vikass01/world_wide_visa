@@ -426,44 +426,6 @@ font-weight: 300;
 	color: #793a93;
 }
 
-#footer{
-
-background: url("http://images.utrechtart.com/products/optionLarge/Canford/canford-card-royal-purple-40733.jpg");
-background-repeat: no-repeat;
-background-position: center;
-background-size: cover;
-color: white;
-padding: 50px 0;
-
-
-}
-
-#footer .logo{
-
-font-size: 47px;
-padding: 0 20px 10px 20px;
-
-}
-
-#footer ul{
-
-padding-left: 0;
-margin-top: 10px ;
-display: block;
-}
-
-#footer ul li{
-
-display: inline-block;
-
-}
-
-#footer ul a{
-	font-size: 30px;
-	color: white;
-	padding: 0 10px;
-
-}
 
 .copyrights{
 	background-color: rgba(0,0,0,0.5);
