@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  #clock {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+  }
+
+  .clockbox{
+    margin: auto;
+    /* border: 1px solid #ccc; */
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .clock{
+    width: 150px;
+    height: 150px;
+    /* border: 1px solid #ee9292; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+
+
+  }
+
+  .clock1{
+    background-image: url("https://clipart-library.com/images_k/clock-transparent-png/clock-transparent-png-6.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .clock2{
+    background-image: url('https://clipart-library.com/images_k/clock-transparent-png/clock-transparent-png-6.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .clock3{
+    background-image: url('https://clipart-library.com/images_k/clock-transparent-png/clock-transparent-png-6.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .clock4{
+    background-image: url('https://clipart-library.com/images_k/clock-transparent-png/clock-transparent-png-6.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+   .hand {
+    position: absolute;
+    bottom: 50%;
+    transform-origin: bottom center;
+    width: 5px;
+    border-radius: 5px;
+  }
+  
+  .arrows {
+    position: absolute;
+    background-color: brown;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+ 
+  .hand1{
+
+    background-color: black;
+    height: 35px;
+
+
+  }
+
+  .hand2{
+
+    background-color: black;
+    height: 45px;
+  }
+
+  .hand3{
+    background-color: red; 
+    height: 55px;
+    overflow: hidden;
+  }
+
+  .country-time{
+    background-color: rgb(108, 108, 224);
+    padding: 5px;
+    color: white;
+  }
