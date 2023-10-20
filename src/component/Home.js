@@ -5,8 +5,11 @@ import './clock/newdelhi/clock.css';
 
 export default function Home(props) {
 
+  
+
   return (
     <div>
+    
         <div className="cover__Wrapper-sc-7fa62t-0 ehlOuW">
           <div className="styled__Container-sc-1ji51nh-1 cover__Container-sc-7fa62t-1 ryIus">
             <h1 size={30} className="cover__Title-sc-7fa62t-2-h1 jBPgjx">
@@ -83,8 +86,8 @@ export default function Home(props) {
                   <div className="clock clock1">
                           <div id="clock" >                          
                                <div className="arrows">
-                                  <div className="hand hand1" style={{rotate:`${props.hRot}deg`}} />
-                                  <div className="hand hand2" style={{rotate:`${props.mRot}deg`}} />
+                                  <div className="hand hand1" style={{rotate:`${props.hRot+Math.round(props.mRot/6/2)}deg`}} />
+                                 <div className="hand hand2" style={{rotate:`${props.mRot}deg`}} />
                                   <div className="hand hand3" style={{rotate:`${props.sRot}deg`}} />
                                </div>
                           </div>   
@@ -100,7 +103,7 @@ export default function Home(props) {
                   <div className="clock clock2">
                         <div id="clock" >
                             <div className="arrows">
-                                <div className="hand hand1" style={{rotate:`${props.usahour}deg`}} />
+                                <div className="hand hand1" style={{rotate:`${props.usahour+Math.round(props.usaminute/6/2)}deg`}} />
                                 <div className="hand hand2" style={{rotate:`${props.usaminute}deg`}} />
                                 <div className="hand hand3" style={{rotate:`${props.usasecond}deg`}} />
                             </div>
@@ -116,7 +119,7 @@ export default function Home(props) {
                   <div className="clock clock3">
                     <div id="clock" >
                       <div className="arrows">
-                          <div className="hand hand1" style={{rotate:`${props.ukhour}deg`}} />
+                          <div className="hand hand1" style={{rotate:`${props.ukhour+Math.round(props.ukminute/6/2)}deg`}} />
                           <div className="hand hand2" style={{rotate:`${props.ukminute}deg`}} />
                           <div className="hand hand3" style={{rotate:`${props.uksecond}deg`}} />
                       </div>
@@ -132,7 +135,7 @@ export default function Home(props) {
                 <div className="clock clock4">
                     <div id="clock"  >
                           <div className="arrows">
-                              <div className="hand hand1" style={{rotate:`${props.japanhour}deg`}} />
+                              <div className="hand hand1" style={{rotate:`${props.japanhour+Math.round(props.japanminute/6/2)}deg`}} />
                               <div className="hand hand2" style={{rotate:`${props.japanminute}deg`}} />
                               <div className="hand hand3" style={{rotate:`${props.japansecond}deg`}} />
                           </div>

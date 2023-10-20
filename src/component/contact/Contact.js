@@ -27,21 +27,7 @@ export default function Contact() {
  
 
   
-    const localData = localStorage.getItem("queries")
-    for(let key in localData) {
-      console.log(key); // shows getItem, setItem and other built-in stuff
-    }
-    
-      
-   
-    // const querybox = document.querySelector('.dfhty')
-    // querybox.insertAdjacentHTML("beforeend", queryhtml )
-  
-
-
-
-  
-  
+    const lsData = [];
 
   function ghyui(){
     query1.classList.add("hidden");
@@ -129,7 +115,8 @@ export default function Contact() {
                 <input type="submit" defaultValue="Send" onClick={submitquery} />
               </div>
             </div>
-          </div>
+            </div>
+          
 
 
           {/* 00000000000000000000000000000000000000000000000000000000 */}

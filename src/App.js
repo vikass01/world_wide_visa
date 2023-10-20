@@ -13,20 +13,22 @@ import Tours from "./Tours";
 import Contact from "./component/contact/Contact";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState } from "react";
+import { useEffect } from "react";
+import React from 'react';
 
 function App() {
-  const [hRot, sethRot] = useState();
-  const [mRot, setmRot] = useState();
-  const [sRot, setsRot] = useState();
-  const [usahour, setusahour] = useState();
-  const [usaminute, setusaminute] = useState();
-  const [usasecond, setusasecond] = useState();
-  const [ukhour, setukhour] = useState();
-  const [ukminute, setukminute] = useState();
-  const [uksecond, setuksecond] = useState();
-  const [japanhour, setjapanhour] = useState();
-  const [japanminute, setjapanminute] = useState();
-  const [japansecond, setjapansecond] = useState();
+  const [hRot, sethRot] = React.useState();
+  const [mRot, setmRot] = React.useState();
+  const [sRot, setsRot] = React.useState();
+  const [usahour, setusahour] = React.useState();
+  const [usaminute, setusaminute] = React.useState();
+  const [usasecond, setusasecond] = React.useState();
+  const [ukhour, setukhour] = React.useState();
+  const [ukminute, setukminute] = React.useState();
+  const [uksecond, setuksecond] = React.useState();
+  const [japanhour, setjapanhour] = React.useState();
+  const [japanminute, setjapanminute] = React.useState();
+  const [japansecond, setjapansecond] = React.useState();
   const [india, setindia] = useState();
   const [usa, setusa] = useState();
   const [uk, setuk] = useState();
@@ -37,9 +39,10 @@ function App() {
   // Uk = timeZone: "Europe/London",
   // japan = timeZone: "Asia/Tokyo",
 
+  
+
   const xyz = () => {
     var date = new Date();
-
     var hh = date.getHours();
     var mm = date.getMinutes();
     var ss = date.getSeconds();
@@ -140,9 +143,13 @@ function App() {
     // weekday: "short",
     // month: "short",
     // year: "numeric"
+
   };
 
-  setInterval(xyz, 1000);
+  
+  
+    setInterval(xyz, 1000);
+ 
 
   // let hRot = 30 * hh;
   // let mRot = 6 * mm;

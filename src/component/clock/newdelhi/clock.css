@@ -37,6 +37,8 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    border-radius: 50%;
+    box-shadow: 10px 10px 40px 0px black, 0px 0px 20px 0px inset black;
   }
 
   .clock2{
@@ -44,6 +46,8 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    border-radius: 50%;
+    box-shadow: 10px 10px 40px 0px black, 0px 0px 20px 0px inset black;
   }
 
   .clock3{
@@ -51,6 +55,8 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    border-radius: 50%;
+    box-shadow: 10px 10px 40px 0px black, 0px 0px 20px 0px inset black;
   }
 
   .clock4{
@@ -58,6 +64,8 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    border-radius: 50%;
+    box-shadow: 10px 10px 40px 0px black, 0px 0px 20px 0px inset black;
   }
   
    .hand {
@@ -101,7 +109,8 @@
   }
 
   .country-time{
-    background-color: rgb(108, 108, 224);
+    background-color: blue;
     padding: 5px;
     color: white;
+    box-shadow: 10px 10px 40px 0px black, 0px 0px 20px 0px inset black;
   }
