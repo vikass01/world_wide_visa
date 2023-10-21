@@ -30,34 +30,11 @@ function App() {
       <Routes>
         <Route exect path="/about" element={<About />} />
         <Route exect path="/tours" element={<Tours />} />
-        <Route exect path="/hotels" element={<List />} />
-        <Route exect path="/hotels/:id" element={<Hotel />} />
-        {/* <Route exect path="/index" element={<Home hRot = {hRot} mRot = {mRot} sRot = {sRot}/>} /> */}
-        <Route
-          exect
-          path="/"
-          element={
-            <Home
-              // hRot={hRot}
-              // mRot={mRot}
-              // sRot={sRot}
-              // usahour={usahour}
-              // usaminute={usaminute}
-              // usasecond={usasecond}
-              // ukhour={ukhour}
-              // ukminute={ukminute}
-              // uksecond={uksecond}
-              // japanhour={japanhour}
-              // japanminute={japanminute}
-              // japansecond={japansecond}
-              // india = {india}
-              // usa = {usa}
-              // uk = {uk}
-              // japan = {japan}
-            />
-          }
-        />
-          <Route exect path="/contact" element={<Contact />} />
+        {/* <Route exect path="/hotels" element={<List />} /> */}
+        {/* <Route exect path="/hotels/:id" element={<Hotel />} /> */}
+        {/* <Route exect path="/index" element={<Home />}/> */}
+        <Route exect path="/" element={ <Home/>}/>
+        <Route exect path="/contact" element={<Contact />} />
       </Routes>
 
       <Footer/>        

@@ -4,7 +4,6 @@ import './AboutUs.css';
 
 export default function About() {
 
-  console.log("hello")
   return (
     
     <div>
@@ -106,7 +105,7 @@ export default function About() {
             <p>
               Cyber security seems to be a hot issue these days with all the recent news about online hackings and whatnots. However, todays functioning society revolves around the online infrastructure that is the world wide web.
             </p>
-            <a href className=" button btn btn-info"> Read More</a>
+            <a href="#about" className=" button btn btn-info"> Read More</a>
             <a href="#contact" className=" button btn btn-success"> Get in touch</a>
           </div>
           <div className="col-md-6 col-sm-6 col-xs-12 progress-bars">

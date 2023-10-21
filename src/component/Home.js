@@ -2,94 +2,107 @@ import React from 'react'
 import './Nav.css';
 import fingerprint from './images/fingerprint.png';
 import './clock/newdelhi/clock.css';
-
+import { useEffect } from 'react';
 
 
 
 
 export default function Home() {
 
-    const watch = ()=>{
-      const date = new Date();
-      const india = date.toLocaleString("en-IN", {
-        timeZone: "Asia/Kolkata",
-        hour: "numeric",
-        minute: "numeric",
-        second: "numeric",
-        month: "short",
-        year: "numeric",
-      });
-      const inhour = date.toLocaleString("en-IN", {timeZone: "Asia/Kolkata",hour: "numeric",});
-      const inminute = date.toLocaleString("en-IN", {timeZone: "Asia/Kolkata",minute: "numeric",});
-      const insecond = date.toLocaleString("en-IN", {timeZone: "Asia/Kolkata",second: "numeric",});
-      document.querySelectorAll(".hand1")[0].style.rotate = inhour.charAt(0)*30+inminute/2+"deg";
-      document.querySelectorAll(".hand2")[0].style.rotate = inminute*6+"deg";
-      document.querySelectorAll(".hand3")[0].style.rotate = insecond*6+"deg";
-      document.querySelectorAll('.countrydesp')[0].innerHTML = india;
+
+  
+
+
+    
+
+    useEffect(()=>{
+    const interval = setInterval(()=>{
+
+    const date =  new Date();
+    const india = date.toLocaleString("en-IN", {
+      timeZone: "Asia/Kolkata",
+      hour: "numeric",
+      minute: "numeric",
+      second: "numeric",
+      month: "short",
+      year: "numeric",
+    });
+    const inhour = date.toLocaleString("en-IN", {timeZone: "Asia/Kolkata",hour: "numeric"});
+    const inminute = date.toLocaleString("en-IN", {timeZone: "Asia/Kolkata",minute: "numeric"});
+    const insecond = date.toLocaleString("en-IN", {timeZone: "Asia/Kolkata",second: "numeric"});
+
+    document.querySelectorAll(".hand1")[0].style.rotate = inhour*30+inminute/2+"deg";
+    document.querySelectorAll(".hand2")[0].style.rotate = inminute*6+"deg";
+    document.querySelectorAll(".hand3")[0].style.rotate = insecond*6+"deg";
+    document.querySelectorAll('.countrydesp')[0].innerHTML = india;
+
+    
 
 
 
 
 
-      const usa = date.toLocaleString("en-US", {
-        timeZone: "America/New_York",
-        hour: "numeric",
-        minute: "numeric",
-        second: "numeric",
-        month: "short",
-        year: "numeric",
-      });
-      const usanhour = date.toLocaleString("en-US", {timeZone: "America/New_York",hour: "numeric",});
-      const usanminute = date.toLocaleString("en-US", {timeZone: "America/New_York",minute: "numeric",});
-      const usansecond = date.toLocaleString("en-US", {timeZone: "America/New_York",second: "numeric",});
-      document.querySelectorAll(".hand1")[1].style.rotate = usanhour.charAt(0)*30+inminute/2+"deg";
-      document.querySelectorAll(".hand2")[1].style.rotate = usanminute*6+"deg";
-      document.querySelectorAll(".hand3")[1].style.rotate = usansecond*6+"deg";
-      document.querySelectorAll('.countrydesp')[1].innerHTML = usa;
+    const usa = date.toLocaleString("en-US", {
+      timeZone: "America/New_York",
+      hour: "numeric",
+      minute: "numeric",
+      second: "numeric",
+      month: "short",
+      year: "numeric",
+    });
+    const usanhour = date.toLocaleString("en-US", {timeZone: "America/New_York",hour: "numeric",});
+    const usanminute = date.toLocaleString("en-US", {timeZone: "America/New_York",minute: "numeric",});
+    const usansecond = date.toLocaleString("en-US", {timeZone: "America/New_York",second: "numeric",});
+    document.querySelectorAll(".hand1")[1].style.rotate = usanhour.charAt(0)*30+inminute/2+"deg";
+    document.querySelectorAll(".hand2")[1].style.rotate = usanminute*6+"deg";
+    document.querySelectorAll(".hand3")[1].style.rotate = usansecond*6+"deg";
+    document.querySelectorAll('.countrydesp')[1].innerHTML = usa;
 
 
 
 
 
-      const uk = date.toLocaleString("en-GB", {
-        timeZone: "Europe/London",
-        hour: "numeric",
-        minute: "numeric",
-        second: "numeric",
-        month: "short",
-        year: "numeric",
-      });
-      const ukhour = date.toLocaleString("en-GB", {timeZone: "Europe/London",hour: "numeric",});
-      const ukminute = date.toLocaleString("en-GB", {timeZone: "Europe/London",minute: "numeric",});
-      const uksecond = date.toLocaleString("en-GB", {timeZone: "Europe/London",second: "numeric",});
-      document.querySelectorAll(".hand1")[2].style.rotate = ukhour.charAt(0)*30+inminute/2+"deg";
-      document.querySelectorAll(".hand2")[2].style.rotate = ukminute*6+"deg";
-      document.querySelectorAll(".hand3")[2].style.rotate = uksecond*6+"deg";
-      document.querySelectorAll('.countrydesp')[2].innerHTML = uk;
+    const uk = date.toLocaleString("en-GB", {
+      timeZone: "Europe/London",
+      hour: "numeric",
+      minute: "numeric",
+      second: "numeric",
+      month: "short",
+      year: "numeric",
+    });
+    const ukhour = date.toLocaleString("en-GB", {timeZone: "Europe/London",hour: "numeric",});
+    const ukminute = date.toLocaleString("en-GB", {timeZone: "Europe/London",minute: "numeric",});
+    const uksecond = date.toLocaleString("en-GB", {timeZone: "Europe/London",second: "numeric",});
+    document.querySelectorAll(".hand1")[2].style.rotate = ukhour*30+inminute/2+"deg";
+    document.querySelectorAll(".hand2")[2].style.rotate = ukminute*6+"deg";
+    document.querySelectorAll(".hand3")[2].style.rotate = uksecond*6+"deg";
+    document.querySelectorAll('.countrydesp')[2].innerHTML = uk;
 
 
 
-      const japan = date.toLocaleString("en-JP", {
-        timeZone: "Asia/Tokyo",
-        hour: "numeric",
-        minute: "numeric",
-        second: "numeric",
-        month: "short",
-        year: "numeric",
-      });
-      const japanhour = date.toLocaleString("en-JP", {timeZone: "Asia/Tokyo",hour: "numeric",});
-      const japanminute = date.toLocaleString("en-JP", {timeZone: "Asia/Tokyo",minute: "numeric",});
-      const japansecond = date.toLocaleString("en-JP", {timeZone: "Asia/Tokyo",second: "numeric",});
-      document.querySelectorAll(".hand1")[3].style.rotate = japanhour.charAt(0)*30+inminute/2+"deg";
-      document.querySelectorAll(".hand2")[3].style.rotate = japanminute*6+"deg";
-      document.querySelectorAll(".hand3")[3].style.rotate = japansecond*6+"deg";
-      document.querySelectorAll('.countrydesp')[3].innerHTML = japan;
-      
+    const japan = date.toLocaleString("en-JP", {
+      timeZone: "Asia/Tokyo",
+      hour: "numeric",
+      minute: "numeric",
+      second: "numeric",
+      month: "short",
+      year: "numeric",
+    });
+    const japanhour = date.toLocaleString("en-JP", {timeZone: "Asia/Tokyo",hour: "numeric",});
+    const japanminute = date.toLocaleString("en-JP", {timeZone: "Asia/Tokyo",minute: "numeric",});
+    const japansecond = date.toLocaleString("en-JP", {timeZone: "Asia/Tokyo",second: "numeric",});
+    document.querySelectorAll(".hand1")[3].style.rotate = japanhour.charAt(0)*30+inminute/2+"deg";
+    document.querySelectorAll(".hand2")[3].style.rotate = japanminute*6+"deg";
+    document.querySelectorAll(".hand3")[3].style.rotate = japansecond*6+"deg";
+    document.querySelectorAll('.countrydesp')[3].innerHTML = japan;
 
-    }
 
-    setInterval(watch, 1000);
 
+
+
+      }, 1000);
+      return () => clearInterval(interval);
+    },[])
 
   return (
     <div>
@@ -119,7 +132,7 @@ export default function Home() {
             </h2>
             <br/>
             <div className="continents__Wrapper-mu4rdf-2 dgFnke">
-              <a className="continents__Continent-mu4rdf-3 jeUIoc"><p>Europe</p>
+              <a className="continents__Continent-mu4rdf-3 jeUIoc" to='/'><p>Europe</p>
                 <div className="continents__Img-mu4rdf-4 continents__EuropeImg-mu4rdf-5 cpzfEQ" /></a><a className="continents__Continent-mu4rdf-3 jeUIoc"><p>Asia</p>
                 <div className="continents__Img-mu4rdf-4 continents__AsiaImg-mu4rdf-6 cgDwQz" /></a><a className="continents__Continent-mu4rdf-3 jeUIoc"><p>Australia</p>
                 <div className="continents__Img-mu4rdf-4 continents__AustraliaImg-mu4rdf-7 fjUZAo" /></a>
@@ -172,7 +185,7 @@ export default function Home() {
                                <div className="arrows">
                                   <div className="hand hand1"/>
                                  <div className="hand hand2"/>
-                                  <div className="hand hand3"/>
+                                  <div className="hand hand3 gghh" />
                                </div>
                           </div>   
                   </div>
