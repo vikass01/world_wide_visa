@@ -12,148 +12,13 @@ import List from "./pages/list/List";
 import Tours from "./Tours";
 import Contact from "./component/contact/Contact";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useState } from "react";
-import { useEffect } from "react";
 import React from 'react';
 
+
+
+
 function App() {
-  const [hRot, sethRot] = React.useState();
-  const [mRot, setmRot] = React.useState();
-  const [sRot, setsRot] = React.useState();
-  const [usahour, setusahour] = React.useState();
-  const [usaminute, setusaminute] = React.useState();
-  const [usasecond, setusasecond] = React.useState();
-  const [ukhour, setukhour] = React.useState();
-  const [ukminute, setukminute] = React.useState();
-  const [uksecond, setuksecond] = React.useState();
-  const [japanhour, setjapanhour] = React.useState();
-  const [japanminute, setjapanminute] = React.useState();
-  const [japansecond, setjapansecond] = React.useState();
-  const [india, setindia] = useState();
-  const [usa, setusa] = useState();
-  const [uk, setuk] = useState();
-  const [japan, setjapan] = useState();
 
-  // india = timeZone: "Asia/Kolkata",
-  // usa = timeZone: "America/New_York",
-  // Uk = timeZone: "Europe/London",
-  // japan = timeZone: "Asia/Tokyo",
-
-  
-
-  const xyz = () => {
-    var date = new Date();
-    var hh = date.getHours();
-    var mm = date.getMinutes();
-    var ss = date.getSeconds();
-    sethRot(hh * 30);
-    setmRot(mm * 6);
-    setsRot(ss * 6);
-
-    const usahour = date.toLocaleString("en-US", {
-      timeZone: "America/New_York",
-      hour: "numeric",
-    });
-    const usaminute = date.toLocaleString("en-US", {
-      timeZone: "America/New_York",
-      minute: "numeric",
-    });
-    const usasecond = date.toLocaleString("en-US", {
-      timeZone: "America/New_York",
-      second: "numeric",
-    });
-
-    
-    setusahour(usahour.charAt(0) * 30);
-    setusaminute(usaminute * 6);
-    setusasecond(usasecond * 6);
-
-    const ukhour = date.toLocaleString("en-GB", {
-      timeZone: "Europe/London",
-      hour: "numeric",
-    });
-    const ukminute = date.toLocaleString("en-GB", {
-      timeZone: "Europe/London",
-      minute: "numeric",
-    });
-    const uksecond = date.toLocaleString("en-GB", {
-      timeZone: "Europe/London",
-      second: "numeric",
-    });
-    setukhour(ukhour * 30);
-    setukminute(ukminute * 6);
-    setuksecond(uksecond * 6);
-
-    const japanhour = date.toLocaleString("en-JP", {
-      timeZone: "Asia/Tokyo",
-      hour: "numeric",
-    });
-    const japanminute = date.toLocaleString("en-JP", {
-      timeZone: "Asia/Tokyo",
-      minute: "numeric",
-    });
-    const japansecond = date.toLocaleString("en-JP", {
-      timeZone: "Asia/Tokyo",
-      second: "numeric"
-    });
-
-    setjapanhour(japanhour.charAt(0) * 30);
-    setjapanminute(japanminute * 6);
-    setjapansecond(japansecond * 6);
-
-    const india = date.toLocaleString("en-IN", {
-      timeZone: "Asia/Kolkata",
-      hour: "numeric",
-      minute: "numeric",
-      second: "numeric",
-      month: "short",
-      year: "numeric",
-    });
-    const usa = date.toLocaleString("en-US", {
-      timeZone: "America/New_York",
-      hour: "numeric",
-      minute: "numeric",
-      second: "numeric",
-      month: "short",
-      year: "numeric",
-    });
-    const uk = date.toLocaleString("en-GB", {
-      timeZone: "Europe/London",
-      hour: "numeric",
-      minute: "numeric",
-      second: "numeric",
-      month: "short",
-      year: "numeric",
-    });
-    const japan = date.toLocaleString("en-JP", {
-      timeZone: "Asia/Tokyo",
-      hour: "numeric",
-      minute: "numeric",
-      second: "numeric",
-      month: "short",
-      year: "numeric",
-    });
-    setindia(india);
-    setusa(usa);
-    setuk(uk);
-    setjapan(japan);
-    // minute: "numeric",
-    // second: "numeric",
-    // day: "numeric",
-    // weekday: "short",
-    // month: "short",
-    // year: "numeric"
-
-  };
-
-  
-  
-    setInterval(xyz, 1000);
- 
-
-  // let hRot = 30 * hh;
-  // let mRot = 6 * mm;
-  // let sRot = 6*ss;
 
   return (
     <Router>
@@ -173,22 +38,22 @@ function App() {
           path="/"
           element={
             <Home
-              hRot={hRot}
-              mRot={mRot}
-              sRot={sRot}
-              usahour={usahour}
-              usaminute={usaminute}
-              usasecond={usasecond}
-              ukhour={ukhour}
-              ukminute={ukminute}
-              uksecond={uksecond}
-              japanhour={japanhour}
-              japanminute={japanminute}
-              japansecond={japansecond}
-              india = {india}
-              usa = {usa}
-              uk = {uk}
-              japan = {japan}
+              // hRot={hRot}
+              // mRot={mRot}
+              // sRot={sRot}
+              // usahour={usahour}
+              // usaminute={usaminute}
+              // usasecond={usasecond}
+              // ukhour={ukhour}
+              // ukminute={ukminute}
+              // uksecond={uksecond}
+              // japanhour={japanhour}
+              // japanminute={japanminute}
+              // japansecond={japansecond}
+              // india = {india}
+              // usa = {usa}
+              // uk = {uk}
+              // japan = {japan}
             />
           }
         />

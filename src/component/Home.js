@@ -3,9 +3,93 @@ import './Nav.css';
 import fingerprint from './images/fingerprint.png';
 import './clock/newdelhi/clock.css';
 
-export default function Home(props) {
 
-  
+
+
+
+export default function Home() {
+
+    const watch = ()=>{
+      const date = new Date();
+      const india = date.toLocaleString("en-IN", {
+        timeZone: "Asia/Kolkata",
+        hour: "numeric",
+        minute: "numeric",
+        second: "numeric",
+        month: "short",
+        year: "numeric",
+      });
+      const inhour = date.toLocaleString("en-IN", {timeZone: "Asia/Kolkata",hour: "numeric",});
+      const inminute = date.toLocaleString("en-IN", {timeZone: "Asia/Kolkata",minute: "numeric",});
+      const insecond = date.toLocaleString("en-IN", {timeZone: "Asia/Kolkata",second: "numeric",});
+      document.querySelectorAll(".hand1")[0].style.rotate = inhour.charAt(0)*30+inminute/2+"deg";
+      document.querySelectorAll(".hand2")[0].style.rotate = inminute*6+"deg";
+      document.querySelectorAll(".hand3")[0].style.rotate = insecond*6+"deg";
+      document.querySelectorAll('.countrydesp')[0].innerHTML = india;
+
+
+
+
+
+      const usa = date.toLocaleString("en-US", {
+        timeZone: "America/New_York",
+        hour: "numeric",
+        minute: "numeric",
+        second: "numeric",
+        month: "short",
+        year: "numeric",
+      });
+      const usanhour = date.toLocaleString("en-US", {timeZone: "America/New_York",hour: "numeric",});
+      const usanminute = date.toLocaleString("en-US", {timeZone: "America/New_York",minute: "numeric",});
+      const usansecond = date.toLocaleString("en-US", {timeZone: "America/New_York",second: "numeric",});
+      document.querySelectorAll(".hand1")[1].style.rotate = usanhour.charAt(0)*30+inminute/2+"deg";
+      document.querySelectorAll(".hand2")[1].style.rotate = usanminute*6+"deg";
+      document.querySelectorAll(".hand3")[1].style.rotate = usansecond*6+"deg";
+      document.querySelectorAll('.countrydesp')[1].innerHTML = usa;
+
+
+
+
+
+      const uk = date.toLocaleString("en-GB", {
+        timeZone: "Europe/London",
+        hour: "numeric",
+        minute: "numeric",
+        second: "numeric",
+        month: "short",
+        year: "numeric",
+      });
+      const ukhour = date.toLocaleString("en-GB", {timeZone: "Europe/London",hour: "numeric",});
+      const ukminute = date.toLocaleString("en-GB", {timeZone: "Europe/London",minute: "numeric",});
+      const uksecond = date.toLocaleString("en-GB", {timeZone: "Europe/London",second: "numeric",});
+      document.querySelectorAll(".hand1")[2].style.rotate = ukhour.charAt(0)*30+inminute/2+"deg";
+      document.querySelectorAll(".hand2")[2].style.rotate = ukminute*6+"deg";
+      document.querySelectorAll(".hand3")[2].style.rotate = uksecond*6+"deg";
+      document.querySelectorAll('.countrydesp')[2].innerHTML = uk;
+
+
+
+      const japan = date.toLocaleString("en-JP", {
+        timeZone: "Asia/Tokyo",
+        hour: "numeric",
+        minute: "numeric",
+        second: "numeric",
+        month: "short",
+        year: "numeric",
+      });
+      const japanhour = date.toLocaleString("en-JP", {timeZone: "Asia/Tokyo",hour: "numeric",});
+      const japanminute = date.toLocaleString("en-JP", {timeZone: "Asia/Tokyo",minute: "numeric",});
+      const japansecond = date.toLocaleString("en-JP", {timeZone: "Asia/Tokyo",second: "numeric",});
+      document.querySelectorAll(".hand1")[3].style.rotate = japanhour.charAt(0)*30+inminute/2+"deg";
+      document.querySelectorAll(".hand2")[3].style.rotate = japanminute*6+"deg";
+      document.querySelectorAll(".hand3")[3].style.rotate = japansecond*6+"deg";
+      document.querySelectorAll('.countrydesp')[3].innerHTML = japan;
+      
+
+    }
+
+    setInterval(watch, 1000);
+
 
   return (
     <div>
@@ -86,15 +170,15 @@ export default function Home(props) {
                   <div className="clock clock1">
                           <div id="clock" >                          
                                <div className="arrows">
-                                  <div className="hand hand1" style={{rotate:`${props.hRot+Math.round(props.mRot/6/2)}deg`}} />
-                                 <div className="hand hand2" style={{rotate:`${props.mRot}deg`}} />
-                                  <div className="hand hand3" style={{rotate:`${props.sRot}deg`}} />
+                                  <div className="hand hand1"/>
+                                 <div className="hand hand2"/>
+                                  <div className="hand hand3"/>
                                </div>
                           </div>   
                   </div>
                     <div className="country-time">
                       <h2 style={{display:"inline-block", marginRight: "5px", fontSize:"18px"}}> New Delhi</h2><img alt="India" style={{width:  "30px"}} src="http://purecatamphetamine.github.io/country-flag-icons/3x2/IN.svg"/>
-                      <h3 style={{fontSize:"18px"}}> {props.india}</h3>
+                      <h3 style={{fontSize:"18px"}} className='countrydesp'></h3>
                     </div>
                 </div>
 
@@ -103,15 +187,15 @@ export default function Home(props) {
                   <div className="clock clock2">
                         <div id="clock" >
                             <div className="arrows">
-                                <div className="hand hand1" style={{rotate:`${props.usahour+Math.round(props.usaminute/6/2)}deg`}} />
-                                <div className="hand hand2" style={{rotate:`${props.usaminute}deg`}} />
-                                <div className="hand hand3" style={{rotate:`${props.usasecond}deg`}} />
+                                <div className="hand hand1" />
+                                <div className="hand hand2" />
+                                <div className="hand hand3" />
                             </div>
                         </div>
                       </div>
                       <div className='country-time'>
                         <h2 style={{display:"inline-block", marginRight: "5px", fontSize:"18px"}}> New York</h2><img alt="United States" style={{width:  "30px"}} src="http://purecatamphetamine.github.io/country-flag-icons/3x2/US.svg"/>
-                        <h3 style={{fontSize:"18px"}}> {props.usa}</h3>
+                        <h3 style={{fontSize:"18px"}} className='countrydesp'></h3>
                       </div>
                   </div>    
 
@@ -119,15 +203,15 @@ export default function Home(props) {
                   <div className="clock clock3">
                     <div id="clock" >
                       <div className="arrows">
-                          <div className="hand hand1" style={{rotate:`${props.ukhour+Math.round(props.ukminute/6/2)}deg`}} />
-                          <div className="hand hand2" style={{rotate:`${props.ukminute}deg`}} />
-                          <div className="hand hand3" style={{rotate:`${props.uksecond}deg`}} />
+                          <div className="hand hand1"/>
+                          <div className="hand hand2"/>
+                          <div className="hand hand3"/>
                       </div>
                     </div>
                   </div>
                     <div className="country-time">
                       <h2 style={{display:"inline-block", marginRight: "5px" , fontSize:"18px"}}> London</h2><img alt="United Kingdom" style={{width:  "30px"}} src="http://purecatamphetamine.github.io/country-flag-icons/3x2/GB.svg"/>
-                      <h3 style={{fontSize:"18px"}}> {props.uk}</h3>
+                      <h3 style={{fontSize:"18px"}} className='countrydesp'></h3>
                     </div>
                 </div> 
 
@@ -135,15 +219,15 @@ export default function Home(props) {
                 <div className="clock clock4">
                     <div id="clock"  >
                           <div className="arrows">
-                              <div className="hand hand1" style={{rotate:`${props.japanhour+Math.round(props.japanminute/6/2)}deg`}} />
-                              <div className="hand hand2" style={{rotate:`${props.japanminute}deg`}} />
-                              <div className="hand hand3" style={{rotate:`${props.japansecond}deg`}} />
+                              <div className="hand hand1"/>
+                              <div className="hand hand2"/>
+                              <div className="hand hand3"/>
                           </div>
                     </div>
                 </div> 
                     <div className="country-time">
                       <h2 style={{display:"inline-block", marginRight: "5px", fontSize:"18px"}}> Tokyo</h2><img alt="Japan" style={{width:  "30px"}} src="http://purecatamphetamine.github.io/country-flag-icons/3x2/JP.svg"/>
-                      <h3 style={{fontSize:"18px"}}> {props.japan}</h3>
+                      <h3 style={{fontSize:"18px"}} className='countrydesp'></h3>
                     </div>
               </div>       
         </div>   
