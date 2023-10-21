@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import './contact.css'
 
 export default function Contact() {
@@ -8,6 +8,9 @@ export default function Contact() {
   const [email, setemail] = useState("");
   const [mobile, setmobile] = useState("");
   const [msg, setmsg] = useState("");
+  const [form, setform] = useState("hidden");
+  
+
 
   const query1 = document.querySelector('.contactForm1')
   const query2 = document.querySelector('.contactForm2')
@@ -27,16 +30,16 @@ export default function Contact() {
  
 
   
-    const lsData = [];
+    
 
-  function ghyui(){
-    query1.classList.add("hidden");
-    query2.classList.remove("hidden")
+  const querytoggle = ()=>{
+    setform("false")
+    
   }
 
   function queryclose(){
-    query1.classList.remove("hidden");
-    query2.classList.add("hidden")
+    setform("hidden")
+    
 
   }
 
@@ -77,7 +80,7 @@ export default function Contact() {
                 </li>
                 <li>
                   <span className='queryhistry'></span>
-                  <span onClick={ghyui}>My Last Queries</span>
+                  <span onClick={querytoggle}>My Last Queries</span>
                 </li>
               </ul>
             </div>
@@ -88,7 +91,10 @@ export default function Contact() {
               <li className='five'></li>
             </ul>
           </div>
-          <div className="contactForm1">
+
+
+          
+          <div className={"contactForm1"}>
             <h2>Send a Message</h2>
             <div className="formBox">
               <div className="inputBox w50">
@@ -121,7 +127,7 @@ export default function Contact() {
 
           {/* 00000000000000000000000000000000000000000000000000000000 */}
 
-                      <div className="contactForm2 hidden">
+                      <div className="contactForm2" id={form}>
                             <button type="button" className="btn btn-light position-absolute top-0 end-0" onClick={queryclose}>close</button>
                             <div className="accordion dfhty" id="accordionExample">
 
