@@ -31,7 +31,7 @@ export default function Home() {
     const inminute = date.toLocaleString("en-IN", {timeZone: "Asia/Kolkata",minute: "numeric"});
     const insecond = date.toLocaleString("en-IN", {timeZone: "Asia/Kolkata",second: "numeric"});
 
-    document.querySelectorAll(".hand1")[0].style.rotate = inhour*30+inminute/2+"deg";
+    document.querySelectorAll(".hand1")[0].style.rotate = inhour.split(" ")[0]*30+inminute/2+"deg";
     document.querySelectorAll(".hand2")[0].style.rotate = inminute*6+"deg";
     document.querySelectorAll(".hand3")[0].style.rotate = insecond*6+"deg";
     document.querySelectorAll('.countrydesp')[0].innerHTML = india;
@@ -53,7 +53,7 @@ export default function Home() {
     const usanhour = date.toLocaleString("en-US", {timeZone: "America/New_York",hour: "numeric",});
     const usanminute = date.toLocaleString("en-US", {timeZone: "America/New_York",minute: "numeric",});
     const usansecond = date.toLocaleString("en-US", {timeZone: "America/New_York",second: "numeric",});
-    document.querySelectorAll(".hand1")[1].style.rotate = usanhour.charAt(0)*30+inminute/2+"deg";
+    document.querySelectorAll(".hand1")[1].style.rotate = usanhour.split(" ")[0]*30+inminute/2+"deg";
     document.querySelectorAll(".hand2")[1].style.rotate = usanminute*6+"deg";
     document.querySelectorAll(".hand3")[1].style.rotate = usansecond*6+"deg";
     document.querySelectorAll('.countrydesp')[1].innerHTML = usa;
@@ -91,7 +91,7 @@ export default function Home() {
     const japanhour = date.toLocaleString("en-JP", {timeZone: "Asia/Tokyo",hour: "numeric",});
     const japanminute = date.toLocaleString("en-JP", {timeZone: "Asia/Tokyo",minute: "numeric",});
     const japansecond = date.toLocaleString("en-JP", {timeZone: "Asia/Tokyo",second: "numeric",});
-    document.querySelectorAll(".hand1")[3].style.rotate = japanhour.charAt(0)*30+inminute/2+"deg";
+    document.querySelectorAll(".hand1")[3].style.rotate = japanhour.split(" ")[0]*30+inminute/2+"deg";
     document.querySelectorAll(".hand2")[3].style.rotate = japanminute*6+"deg";
     document.querySelectorAll(".hand3")[3].style.rotate = japansecond*6+"deg";
     document.querySelectorAll('.countrydesp')[3].innerHTML = japan;
@@ -102,19 +102,18 @@ export default function Home() {
 
   return (
     <div>
-    
-        <div className="cover__Wrapper-sc-7fa62t-0 ehlOuW">
-          <div className="styled__Container-sc-1ji51nh-1 cover__Container-sc-7fa62t-1 ryIus">
-            <h1 size={30} className="cover__Title-sc-7fa62t-2-h1 jBPgjx">
+        <div className="ehlOuW">
+          <div className="ryIus">
+            <h1 size={30} className="jBPgjx">
               Visas and tours to any country!
             </h1>
-            <form autoComplete="on">
+            <form autoComplete="false">
               <p>
-                <input type="tel" name="tel" required autoComplete="tel" placeholder="Phone number" className="cover__Input-sc-7fa62t-3 cucclX" />
+                <input type="tel" name="tel" required autoComplete="tel" placeholder="Phone number" className="cucclX" />
               </p>
               <br/>
               <p>
-                <button className="styled__PulseBtn-sc-1ji51nh-3 caLgOF">
+                <button className="caLgOF">
                   To get a consultation
                 </button>
               </p>

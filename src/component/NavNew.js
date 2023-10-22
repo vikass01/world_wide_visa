@@ -101,19 +101,19 @@ export default function NavNew() {
                   </div>
                   <div className="rowbox1">
                       <div className="acolumn">
-                        <h3>Category 1</h3>
+                        <h5>Category 1</h5>
                         <a href="#">Link 1</a>
                         <a href="#">Link 2</a>
                         <a href="#">Link 3</a>
                       </div>
                       <div className="acolumn">
-                        <h3>Category 2</h3>
+                        <h5>Category 2</h5>
                         <a href="#">Link 1</a>
                         <a href="#">Link 2</a>
                         <a href="#">Link 3</a>
                       </div>
                       <div className="acolumn">
-                        <h3>Category 3</h3>
+                        <h5>Category 3</h5>
                         <a href="#">Link 1</a>
                         <a href="#">Link 2</a>
                         <a href="#">Link 3</a>
@@ -128,24 +128,24 @@ export default function NavNew() {
           <button className="adropbtn"><a>Study<i className="fa-solid fa-angle-down"></i></a></button>
           <div className="adropdown-content">
                 <div className="aheader">
-                  <h2>Study Menu</h2>
+                  <h2>WELCOME TO BRIGHT FUTURE ABROAD STUDIES</h2>
                 </div>
               <div className="arow">
                   <div className="rowbox1">
                       <div className="acolumn">
-                        <h3>Category 1</h3>
+                        <h5>Category 1</h5>
                         <a href="#">Link 1</a>
                         <a href="#">Link 2</a>
                         <a href="#">Link 3</a>
                       </div>
                       <div className="acolumn">
-                        <h3>Category 2</h3>
+                        <h5>Category 2</h5>
                         <a href="#">Link 1</a>
                         <a href="#">Link 2</a>
                         <a href="#">Link 3</a>
                       </div>
                       <div className="acolumn">
-                        <h3>Category 3</h3>
+                        <h5>Category 3</h5>
                         <a href="#">Link 1</a>
                         <a href="#">Link 2</a>
                         <a href="#">Link 3</a>
