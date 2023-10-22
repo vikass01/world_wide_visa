@@ -96,10 +96,6 @@ export default function Home() {
     document.querySelectorAll(".hand3")[3].style.rotate = japansecond*6+"deg";
     document.querySelectorAll('.countrydesp')[3].innerHTML = japan;
 
-
-
-
-
       }, 1000);
       return () => clearInterval(interval);
     },[])

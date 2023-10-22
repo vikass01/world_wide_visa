@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { createElement, useEffect, useRef, useState } from 'react'
 import './contact.css'
 
 export default function Contact() {
@@ -9,30 +9,59 @@ export default function Contact() {
   const [mobile, setmobile] = useState("");
   const [msg, setmsg] = useState("");
   const [form, setform] = useState("hidden");
+
   
 
 
-  const query1 = document.querySelector('.contactForm1')
-  const query2 = document.querySelector('.contactForm2')
+
+ useEffect(()=>{
   
-// const queryhtml = `<div class="accordion-item">
-// <h2 class="accordion-header">
-// <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-//   Accordion Item #2
-// </button>
-// </h2>
-// <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-// <div class="accordion-body">
-//   <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-// </div>
-// </div>
-// </div>`
+  let queries;
+  const huyg = document.querySelector(".bhasha")
+  
+  const localdata = localStorage.getItem("queries")
+  if (localdata===null){
+    queries=[]
+  }else{
+    queries = JSON.parse(localStorage.getItem("queries"))
+  }
  
+
+  const newbha = document.createElement("div")
+  const newbhasha = huyg.appendChild(newbha)
+  newbhasha.classList.add("vbgh")
+
+  queries.forEach(element => {
+    newbhasha.insertAdjacentHTML("beforeend", `<button class="accordion">Date</button>
+    <div class="panel">
+      <span>Name: ${element.name} ${element.lastName}</span>
+      <span> Email:${element.email}</span>
+      <span> Contact:${element.mobile}</span>
+      <p> Your Query:${element.msg}</p>
+    </div>`)
+    
+  });
+
+
+ },[])
+
+
+
+ var acc = document.querySelectorAll(".accordion");
+ var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.add("active");
+      var panel = this.nextElementSibling.style.display = "block"
+      
+    });
+  }
 
   
     
 
-  const querytoggle = ()=>{
+  const lastquery = ()=>{
     setform("false")
     
   }
@@ -43,19 +72,36 @@ export default function Contact() {
 
   }
 
-  const querydata = {
-    name:name,
-    lastName : lname,
-    email : email,
-    mobile : mobile,
-    msg : msg
-  }
-
   function submitquery(){
-    let data = localStorage.getItem("queries")
-    localStorage.setItem("queries", `${data === null ? "" : data}`  + JSON.stringify(querydata))
 
+    let queries;
+
+    let localS = localStorage.getItem("queries")
+    if(localS === null){
+      queries = [];
+    }else{
+      queries = JSON.parse(localStorage.getItem("queries"))
+    }
+
+    
+
+    const querydata = {
+      name:name,
+      lastName : lname,
+      email : email,
+      mobile : mobile,
+      msg : msg,
+      date: new Date().toLocaleString()
+    }
+
+    queries.push(querydata)
+
+    localStorage.setItem("queries", JSON.stringify(queries))
+    
+      
   }
+
+  
 
   return (
     <div className='contactbox'>
@@ -80,7 +126,7 @@ export default function Contact() {
                 </li>
                 <li>
                   <span className='queryhistry'></span>
-                  <span onClick={querytoggle}>My Last Queries</span>
+                  <span onClick={lastquery}>My Last Queries</span>
                 </li>
               </ul>
             </div>
@@ -128,41 +174,46 @@ export default function Contact() {
           {/* 00000000000000000000000000000000000000000000000000000000 */}
 
                       <div className="contactForm2" id={form}>
-                            <button type="button" className="btn btn-light position-absolute top-0 end-0" onClick={queryclose}>close</button>
-                            <div className="accordion dfhty" id="accordionExample">
 
 
-                                <div className="accordion-item">
-                                  <h2 className="accordion-header">
-                                    <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                      Accordion Item #1
-                                    </button>
-                                  </h2>
-                                  <div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                                    <div className="accordion-body">
-                                    <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                                    </div>
-                                  </div>
-                              </div>
-
-
-
-                              {/* <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Accordion Item #2
-                                  </button>
-                                </h2>
-                                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                  <div class="accordion-body">
-                                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                                  </div>
+                                <div className="ghjg"><button onClick={queryclose}>Close</button>
                                 </div>
-                              </div> */}
+
+
+                                <div className='bhasha'>
+
+
+                                    {/* <button className="accordion">Date</button>
+                                    <div className="panel">
+                                      <span>Name:</span>
+                                      <span> Email:</span>
+                                      <span> Contact:</span>
+                                      <p> Your Query:</p>
+                                    </div> */}
+
+
+                                </div>
+
+                                
+
+
+
+                            
+                     </div>
+
+
 
                               
-                          </div>
-                        </div>
+
+                              
+
+
+                              
+
+
+                              
+
+                        
 
 
 
