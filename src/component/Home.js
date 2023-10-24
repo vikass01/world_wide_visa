@@ -2,12 +2,16 @@ import React from 'react'
 import './Nav.css';
 import fingerprint from './images/fingerprint.png';
 import './clock/newdelhi/clock.css';
-import { useEffect } from 'react';
+import { useEffect,useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import { useState } from 'react';
 
 
 
 
 export default function Home() {
+
+  const [req, setreq] = useState("");
 
 
   
@@ -100,41 +104,117 @@ export default function Home() {
       return () => clearInterval(interval);
     },[])
 
+
+    const forms = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setreq("Query Sent Successfully...")
+    setTimeout(() => {
+      setreq("")
+      document.querySelectorAll(".cucclX")[0].value= "";
+      document.querySelectorAll(".cucclX")[1].value = "";
+      document.querySelectorAll(".cucclX")[2].value= "";
+    }, 1000);
+    emailjs.sendForm('service_p73cw28', 'template_l8h877l', forms.current, 'D5-RldC84sFFtvfSt')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
+
+
+
+
+
   return (
     <div>
+
+    {/* 0000000000000000000000000000000 */}
         <div className="ehlOuW">
           <div className="ryIus">
-            <h1 size={30} className="jBPgjx">
-              Visas and tours to any country!
-            </h1>
-            <form autoComplete="false">
-              <p>
-                <input type="tel" name="tel" required autoComplete="tel" placeholder="Phone number" className="cucclX" />
-              </p>
-              <br/>
-              <p>
-                <button className="caLgOF">
-                  To get a consultation
-                </button>
-              </p>
+            <h1 size={30} className="jBPgjx">Visas and tours to any country!</h1>
+            
+            <form autoComplete="off" ref={forms} onSubmit={sendEmail}>
+              
+                <input autoComplete="off" spellCheck="false"  type="tel" name="user_name" required placeholder="Enter Your Name" className="cucclX" />
+                <br/>
+                <input autoComplete="off" spellCheck="false" type='text' name='user_mobile' placeholder='Mobile Number' className='cucclX'></input>
+
+                <br/>
+                <textarea autoComplete="off" spellCheck="false" type='text' name='user_msg' rows={3} placeholder='Your Query about' className='cucclX'></textarea>
+                <br/>
+              
+                <button type='submit' defaultValue="Send" className="caLgOF">Get Call Back</button>
+                <br/>
+                <span className='req'> {req}</span>
+              
             </form>
           </div>
         </div>
-        <div height="auto" id="continents" className="styled__Section-sc-1ji51nh-0 continents__Section-mu4rdf-0 kELZqj">
-          <div className="styled__Container-sc-1ji51nh-1 bQcjpC">
-            <h2 className="styled__Title-sc-1ji51nh-2 continents__Title-mu4rdf-1 kYBuig">
+
+
+
+        <div className="ghjjk">
+
+                <div className="main">
+                            <div className="extramain">
+                                <div className="bg-image img1"></div>
+                                <div className="bg-image img2"></div>
+                                <div className="bg-image img3"></div>
+                                <div className="bg-image img4"></div>
+                                <div className="bg-image img5"></div>
+                                <div className="bg-image img6"></div>
+                                <div className="bg-image img7"></div>
+                                <div className="bg-image img8"></div>
+                              </div>   
+                </div>
+          
+        </div>
+
+
+
+
+
+
+
+        {/* 00000000000000000000000000000000000 */}
+        {/* <div height="auto" id="continents" className="kELZqj">
+          <div className="bQcjpC">
+            <h2 className="kYBuig">
               Where will we go?
             </h2>
             <br/>
-            <div className="continents__Wrapper-mu4rdf-2 dgFnke">
-              <a className="continents__Continent-mu4rdf-3 jeUIoc" to='/'><p>Europe</p>
-                <div className="continents__Img-mu4rdf-4 continents__EuropeImg-mu4rdf-5 cpzfEQ" /></a><a className="continents__Continent-mu4rdf-3 jeUIoc"><p>Asia</p>
-                <div className="continents__Img-mu4rdf-4 continents__AsiaImg-mu4rdf-6 cgDwQz" /></a><a className="continents__Continent-mu4rdf-3 jeUIoc"><p>Australia</p>
-                <div className="continents__Img-mu4rdf-4 continents__AustraliaImg-mu4rdf-7 fjUZAo" /></a>
+            <div className="dgFnke">
+              <a className="jeUIoc" to='/'><p>Europe</p>
+                <div className="cpzfEQ" /></a><a className="jeUIoc"><p>Asia</p>
+                <div className="cgDwQz" /></a><a className="jeUIoc"><p>Australia</p>
+                <div className="fjUZAo" /></a>
+            </div>
+            <p>Select continent for more details</p>
+          </div>
+        </div> */}
+
+
+
+        <div height="auto" className="kELZqj">
+          <div className="bQcjpC">
+            <h2 className="kYBuig">
+              Where will we go?
+            </h2>
+            <br/>
+            <div className="dgFnke">
+              <a className="jeUIoc" to='/'><p>Europe</p>
+                <div className="cpzfEQ" /></a><a className="jeUIoc"><p>Asia</p>
+                <div className="cgDwQz" /></a><a className="jeUIoc"><p>Australia</p>
+                <div className="fjUZAo" /></a>
             </div>
             <p>Select continent for more details</p>
           </div>
         </div>
+
+        {/* 0000000000000000000000000000000000000000000000000000 */}
         <div id="biometrics" className="biometrics__Section-sc-1qjc3xo-0 iwBKEP">
           <div className="biometrics__TextSection-sc-1qjc3xo-1 eFpeKG">
             <img src= {fingerprint} className="biometrics__FingerPrintImg-sc-1qjc3xo-5 ebVVUT" /><svg x="0px" y="0px" width="300px" height="500px" viewBox="0 5 130 220" preserveAspectRatio="none" fill="#fff" className="biometrics__WaveStyled-sc-1qjc3xo-2 eoBsPU">
@@ -164,17 +244,17 @@ export default function Home() {
         <div height="auto" id="advantages" className="styled__Section-sc-1ji51nh-0 dRCKEU">
                 <div className="styled__Container-sc-1ji51nh-1 bQcjpC">
                       <h2 className="styled__Title-sc-1ji51nh-2 advantages__Title-sc-1rvjoc-0 iTdKte">
-                        Are you looking for a reliable visa application center ?
+                        Apply from any location in the world ?
                       </h2>
                       <h3 className="advantages__SubTitle-sc-1rvjoc-1 kussSZ">
-                      The World Clock — Worldwide
+                      All time zone — Support
                       </h3>          
                   
                 </div>
           <div className="clockbox">
 
 
-              <div>
+              <div className='bhyuio'>
                   <div className="clock clock1">
                           <div id="clock" >                          
                                <div className="arrows">
@@ -186,12 +266,12 @@ export default function Home() {
                   </div>
                     <div className="country-time">
                       <h2 style={{display:"inline-block", marginRight: "5px", fontSize:"18px"}}> New Delhi</h2><img alt="India" style={{width:  "30px"}} src="http://purecatamphetamine.github.io/country-flag-icons/3x2/IN.svg"/>
-                      <h3 style={{fontSize:"18px"}} className='countrydesp'></h3>
+                      <h3 className='countrydesp'></h3>
                     </div>
                 </div>
 
 
-                <div>
+                <div className='bhyuio'>
                   <div className="clock clock2">
                         <div id="clock" >
                             <div className="arrows">
@@ -203,11 +283,11 @@ export default function Home() {
                       </div>
                       <div className='country-time'>
                         <h2 style={{display:"inline-block", marginRight: "5px", fontSize:"18px"}}> New York</h2><img alt="United States" style={{width:  "30px"}} src="http://purecatamphetamine.github.io/country-flag-icons/3x2/US.svg"/>
-                        <h3 style={{fontSize:"18px"}} className='countrydesp'></h3>
+                        <h3 className='countrydesp'></h3>
                       </div>
                   </div>    
 
-              <div>
+              <div className='bhyuio'>
                   <div className="clock clock3">
                     <div id="clock" >
                       <div className="arrows">
@@ -219,11 +299,11 @@ export default function Home() {
                   </div>
                     <div className="country-time">
                       <h2 style={{display:"inline-block", marginRight: "5px" , fontSize:"18px"}}> London</h2><img alt="United Kingdom" style={{width:  "30px"}} src="http://purecatamphetamine.github.io/country-flag-icons/3x2/GB.svg"/>
-                      <h3 style={{fontSize:"18px"}} className='countrydesp'></h3>
+                      <h3 className='countrydesp'></h3>
                     </div>
                 </div> 
 
-             <div>   
+             <div className='bhyuio'>   
                 <div className="clock clock4">
                     <div id="clock"  >
                           <div className="arrows">
@@ -235,7 +315,7 @@ export default function Home() {
                 </div> 
                     <div className="country-time">
                       <h2 style={{display:"inline-block", marginRight: "5px", fontSize:"18px"}}> Tokyo</h2><img alt="Japan" style={{width:  "30px"}} src="http://purecatamphetamine.github.io/country-flag-icons/3x2/JP.svg"/>
-                      <h3 style={{fontSize:"18px"}} className='countrydesp'></h3>
+                      <h3 className='countrydesp'></h3>
                     </div>
               </div>       
         </div>   
@@ -243,7 +323,7 @@ export default function Home() {
         
         <div id="tours" className="styled__Section-sc-1ji51nh-0 tours__Section-bhr5fb-0 hxJnWr">
           <h2 className="styled__Title-sc-1ji51nh-2 tours__Title-bhr5fb-2 bUWTBM">
-            Bus and air tours
+            International Holidays
           </h2>
           <button className="styled__PulseBtn-sc-1ji51nh-3 tours__Button-bhr5fb-3 kYYayU">
             Choose a tour
@@ -258,23 +338,23 @@ export default function Home() {
             <ul className="services__List-ddmf7w-1 grYKsD">
               <li className="services__Item-ddmf7w-2 hTXiu">
                 <div className="services__Img-ddmf7w-3 fwtetB" />
-                <p>Visa processing</p>
+                <p style={{fontSize:"16px"}}>Visa processing</p>
               </li>
               <li className="services__Item-ddmf7w-2 hTXiu">
                 <div className="services__Img-ddmf7w-3 gdDHuq" />
-                <p>Registration of tours</p>
+                <p style={{fontSize:"16px"}}>Registration of tours</p>
               </li>
               <li className="services__Item-ddmf7w-2 hTXiu">
                 <div className="services__Img-ddmf7w-3 cGheSV" />
-                <p>Flights</p>
+                <p style={{fontSize:"16px"}}>Air Ticketing</p>
               </li>
               <li className="services__Item-ddmf7w-2 hTXiu">
-                <div className="services__Img-ddmf7w-3 lcrnjC" />
-                <p>Hotel reservations</p>
+                <div className="lcrnjC" />
+                <p style={{fontSize:"16px"}}>Abroad Study</p>
               </li>
               <li className="services__Item-ddmf7w-2 hTXiu">
                 <div className="services__Img-ddmf7w-3 kQpRaS" />
-                <p>Travel insurance</p>
+                <p style={{fontSize:"16px"}}>Immigration</p>
               </li>
             </ul>
           </div>

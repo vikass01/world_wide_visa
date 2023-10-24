@@ -9,10 +9,9 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
 
-
 .contactbox
 {   
-    height: 100vh;
+    height: 120vh;
     background: linear-gradient(
         to right,
         rgba(238,222,146,255) 0%,
@@ -390,7 +389,7 @@
     .containercontact .contactForm1
     {
         width: 100%;
-        height: auto;
+        /* height: 200px; */
         border-radius: 0px;
     }
 

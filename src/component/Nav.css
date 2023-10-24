@@ -72,15 +72,15 @@
     background-color: #003580;
     font-size: 16px;
     border: none;
-    border-radius: 40px;
+    /* border-radius: 40px; */
     cursor: pointer;
     -webkit-animation: pulse 2s infinite;
     animation: pulse 2s infinite;
     width: 285px;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
-    -webkit-transition-property: box-shadow;
-    transition-property: box-shadow;
+    -webkit-transition-property:all;
+    transition-property:all;
   }
   .caLgOF:focus {
     outline: none;
@@ -117,6 +117,36 @@
     background: url(./images/cover.png) 80% 50px / contain no-repeat,
       linear-gradient(to right, #64acb7, #68c6e0);
   }
+
+.ghjjk{
+  width: 100vw;
+  height: 455px;
+  background: linear-gradient(to right, #64acb7, #68c6e0);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+@media  (min-width: 0px) and (max-width: 414px) {
+  .ehlOuW {
+    display: none;
+  }
+}
+
+
+
+
+@media  (min-width: 415px) and (max-width: 20000px) {
+  .ghjjk {
+    display: none;
+  }
+}
+
+
+
+ 
 
    @media (max-width: 939px) {
     .ehlOuW {
@@ -163,13 +193,14 @@
   }
   /* sc-component-id: cover__Input-sc-7fa62t-3 */
   .cucclX {
-    padding: 25px 10px;
-    border-radius: 40px;
+    padding: 10px 10px;
+    /* border-radius: 20px; */
     border: 1px solid #ff9818;
     outline: none;
     text-align: center;
-    font-size: 20px;
+    font-size: 14px;
     width: 285px;
+    margin-bottom: 5px;
   }
   /* sc-component-id: continents__Section-mu4rdf-0 */
   .kELZqj {
@@ -533,10 +564,10 @@
     width: 150px;
     height: 150px;
     border-radius: 100px;
-    background-size: auto;
+    background-size: contain;
+    background-image: url(./images/abroadstudy.png);
     background-repeat: no-repeat;
-    background-position: -455px 0;
-    background-image: url(./images/services.png);
+    background-position: center;
   }
   .kQpRaS {
     margin: 0 auto;
@@ -1063,4 +1094,50 @@
   }
 
   
+  /* 00000000000000000000000000000000000000000000000 */
+  .main{
+
+    height: 450px;
+    width: 100%;
+    overflow-x:scroll;
+  }
   
+  .extramain{
+    width: 735%;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .bg-image {
+    height: 447px;
+    width:323px;
+    margin-left: 3px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: 5px solid black;
+    border-radius: 10px;
+  }
+  
+  /* Images used */
+  .img1 
+  { background-image: url("./images/study/study1.jpg");
+  }
+  .img2 { background-image: url("./images/visa/visa1.jpg"); 
+  }
+  .img3 { background-image: url("./images/study/immigration1.jpg"); 
+  }
+  .img4 { background-image: url("./images/tour/tour2.png"); 
+  }
+  .img5 { background-image: url("./images/tour/tour3.jpg");
+  }
+  .img6 { background-image: url("./images/study/study2.jpg"); 
+  }
+  .img7 { background-image: url("./images/tour/tour1.jpg"); 
+  }
+  .img8 { background-image: url("./images/tour/tour4.jpg"); 
+  }
+
+  
+  /* 000000000000000000000000000000000000000000000000000 */

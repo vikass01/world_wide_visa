@@ -10,6 +10,7 @@ export default function Contact() {
   const [mobile, setmobile] = useState("");
   const [msg, setmsg] = useState("");
   const [form, setform] = useState("hidden");
+  const [requ, setrequ] = useState("");
 
 
 
@@ -17,6 +18,14 @@ export default function Contact() {
 
     const sendEmail = (e) => {
       e.preventDefault();
+      setTimeout(() => {
+        setname("")
+        setlname("")
+        setemail("")
+        setmobile("")
+        setmsg("")
+        setrequ("")
+      }, 1000);
   
       emailjs.sendForm('service_p73cw28', 'template_l8h877l', forms.current, 'D5-RldC84sFFtvfSt')
         .then((result) => {
@@ -140,7 +149,8 @@ for (i = 0; i < acc.length; i++) {
 
     localStorage.setItem("queries", JSON.stringify(queries))
 
-    // window.location.reload(false)
+    
+    
 
 
     
@@ -213,6 +223,7 @@ for (i = 0; i < acc.length; i++) {
               </div>
               <div className="inputBox w100">
                 <input type="submit" defaultValue="Send" onClick={submitquery} />
+                <span >{requ}</span>
               </div>
             </div>
             </div>

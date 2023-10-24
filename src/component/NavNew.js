@@ -185,10 +185,10 @@ export default function NavNew() {
         <div className="subnav">
           <button className="subnavbtn"><i className="fa-solid fa-bars"/></button>
           <div className="subnav-content">
-            <a href="#bring">Bring</a>
-            <a href="#deliver">Deliver</a>
-            <a href="#package">Package</a>
-            <a href="#express">Express</a>
+            <Link to="/about">About</Link>
+            <Link to="/tours">Tours</Link>
+            <Link to="/hotels">Package</Link>
+            <Link to="/contact">Contact</Link>
           </div>
         </div>
       </div>

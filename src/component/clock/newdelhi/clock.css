@@ -11,6 +11,17 @@
     align-items: center; 
   }
 
+ 
+
+  .countrydesp{
+    font-size: 0.9rem;
+  }
+
+  .bhyuio{
+   text-align: center;
+   align-items: center;
+  }
+
   .clockbox{
     margin: auto;
     /* border: 1px solid #ccc; */
@@ -39,6 +50,7 @@
     background-position: center;
     border-radius: 50%;
     box-shadow: 10px 10px 40px 0px black, 0px 0px 20px 0px inset black;
+    margin: 0px auto;
   }
 
   .clock2{
@@ -48,6 +60,7 @@
     background-position: center;
     border-radius: 50%;
     box-shadow: 10px 10px 40px 0px black, 0px 0px 20px 0px inset black;
+    margin: 0px auto;
   }
 
   .clock3{
@@ -57,6 +70,7 @@
     background-position: center;
     border-radius: 50%;
     box-shadow: 10px 10px 40px 0px black, 0px 0px 20px 0px inset black;
+    margin: 0px auto;
   }
 
   .clock4{
@@ -66,6 +80,7 @@
     background-position: center;
     border-radius: 50%;
     box-shadow: 10px 10px 40px 0px black, 0px 0px 20px 0px inset black;
+    margin: 0px auto;
   }
   
    .hand {
@@ -113,4 +128,5 @@
     padding: 5px;
     color: white;
     box-shadow: 10px 10px 40px 0px black, 0px 0px 20px 0px inset black;
+    margin: 10px 0px;
   }
