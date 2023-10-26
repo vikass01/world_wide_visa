@@ -1,16 +1,17 @@
 .searchItem {
+  width: 330px;
   border: 1px solid lightgray;
   padding: 10px;
   border-radius: 5px;
   display: flex;
   justify-content: space-between;
-  gap: 20px;
-  margin-bottom: 20px;
+  flex-direction: column;
+  margin: 0px 10px 10px 0px;
 }
 
 .siImg {
-  width: 200px;
-  height: 200px;
+  width: 310px;
+  height: 250px;
   object-fit: cover;
 }
 

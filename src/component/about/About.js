@@ -1,17 +1,31 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import './AboutUs.css';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+
+
+// import required modules
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 
 export default function About() {
+
 
   return (
     
     <div>
     <header id="home">
-      <div className="container text-center vertical-align">
+      <div className="qqcontainer text-center vertical-align">
         <h1 className="logo"> World Wide <strong>Visa</strong></h1>
+        <br/>
         <div className='aboutlogo' />
-        <h3>A responsive, one page, HTML5 Bootstrap theme.<br /> Created by <strong>Vikas Dhara</strong> </h3>
+        <span>We designed one solution for your multi requiements Like Visa Tours Immigration Study</span>
+        <br/>
         <a href="#about" className="learn-more">
           <i className="fa fa-angle-down third-arrow" />
           <i className="fa fa-angle-down  second-arrow" />
@@ -29,7 +43,7 @@ export default function About() {
         </div>
         <h2 style={{textAlign: 'center'}}>Our Team</h2>
         <div className="row">
-          <div className="column">
+          <div className="abcolumn">
             <div className="card">
               <img src="https://som.iitkgp.ac.in/images/director_off.jpg" alt="Jane" style={{width: '100%'}} />
               <div className="container">
@@ -41,7 +55,7 @@ export default function About() {
               </div>
             </div>
           </div>
-          <div className="column">
+          <div className="abcolumn">
             <div className="card">
               <img src="https://som.iitkgp.ac.in/images/director_off.jpg" alt="Mike" style={{width: '100%'}} />
               <div className="container">
@@ -53,7 +67,7 @@ export default function About() {
               </div>
             </div>
           </div>
-          <div className="column">
+          <div className="abcolumn">
             <div className="card">
               <img src="https://som.iitkgp.ac.in/images/director_off.jpg" alt="John" style={{width: '100%'}} />
               <div className="container">
@@ -94,7 +108,7 @@ export default function About() {
         <h3 className="text-uppercase"> Our <strong>Services</strong></h3>
         <hr className="icon" />
       </div>
-      <div className="container">
+      <div className="container ghsdf">
         <div className="row">
           <div className="col-md-4 col-sm-6 col-xs-12 service-item">
             <header>
@@ -159,9 +173,115 @@ export default function About() {
         </div>
       </div>
     </div>
+
+
+
+{/* 000000000000000000000000000000000000000000000 */}
+
+
     <div id="skills">
       <div className="container">
-        <div className="row">
+
+      {/* -------------------------------------------------------------------------------- */}
+
+                  
+              {/* <div className="slideshow-container">
+
+              
+                <div className="mySlides">
+                  <div className="authordiv" ><div className='author1'></div> </div>
+                      <q className='statement'>1 I love you the more in that I believe you had liked me for my own sake and for nothing else</q>
+                      <p className="author">- John Keats</p>
+                  </div>
+               
+                <a className="prev" onClick={previousbtn}>&#10094;</a>
+                <a className="next" onClick={nextbtn}>&#10095;</a>
+              </div>
+
+             
+              <div className="dot-container">
+                <span className="dot" ></span>
+                <span className="dot" ></span>
+                <span className="dot" ></span>
+              </div> */}
+
+
+
+              <>
+                <Swiper
+                  spaceBetween={30}
+                  centeredSlides={true}
+                  autoplay={{
+                    delay: 5000,
+                    disableOnInteraction: false,
+                  }}
+                  pagination={{
+                    clickable: true,
+                  }}
+                  navigation={true}
+                  modules={[Autoplay, Pagination, Navigation]}
+                  className="mySwiper"
+                >
+                  <SwiperSlide>
+                      <div className="mySlides">
+                      <div className="authordiv" ><div className='profile author1'></div> </div>
+                          <q className='statement'>1 I love you the more in that I believe you had liked me for my own sake and for nothing else</q>
+                          <p className="author">- John Keats</p>
+                      </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                        <div className="mySlides">
+                        <div className="authordiv" ><div className='profile author2'></div> </div>
+                            <q className='statement'>Certainly, travel is more than the seeing of sights; it is a change that goes on, deep and permanent, in the ideas of living.</q>
+                            <p className="author">- Mary Ritter Beard</p>
+                        </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                        <div className="mySlides">
+                        <div className="authordiv" ><div className='profile author3'></div> </div>
+                            <q className='statement'>The man who goes alone can start today; but he who travels with another must wait till that other is ready.</q>
+                            <p className="author">- Henry David Thoreau</p>
+                        </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                        <div className="mySlides">
+                        <div className="authordiv" ><div className='profile author4'></div> </div>
+                            <q className='statement'>Travel makes one modest. You see what a tiny place you occupy in the world.</q>
+                            <p className="author">- Gustave Flaubert</p>
+                        </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                        <div className="mySlides">
+                        <div className="authordiv" ><div className='profile author5'></div> </div>
+                            <q className='statement'>Robert Frost was right. To take the 'road less traveled by' does make all the difference.</q>
+                            <p className="author">- Samantha Brown</p>
+                        </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                        <div className="mySlides">
+                        <div className="authordiv" ><div className='profile author6'></div> </div>
+                            <q className='statement'>Just to travel is rather boring, but to travel with a purpose is educational and exciting</q>
+                            <p className="author">- Sargent Shriver</p>
+                        </div>
+                  </SwiperSlide>
+                  
+                </Swiper>
+    </>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      {/* ------------------------------------------------------------------------------- */}
+        {/* <div className="row">
           <div className="col-md-6 col-sm-6 col-xs-12">
             <h1><strong>Our Skills</strong></h1>
             <h3> It's what we do best</h3>
@@ -205,9 +325,19 @@ export default function About() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
+
+
       </div>
     </div>
+
+
+{/* 0000000000000000000000000000000000000000000000000000000000 */}
+
+
+
+
+
   </div>
       
       

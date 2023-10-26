@@ -3,13 +3,52 @@
   background: #141e30;
   background: linear-gradient(to left, #243b55, #141e30);
   display: flex;
+  flex-wrap: wrap;
   border-bottom: 2px solid #233557;
 }
 
-@media  (min-width: 0px) and (max-width: 763px) {
-  .footerContainer {
+@media  (min-width: 0px) and (max-width: 654px) {
+  .logohead{
+    width: 100%;
+  }
+
+  .footlist{
     display: none;
   }
+
+  
+
+}
+
+@media  (min-width: 655px) and (max-width: 5000px) {
+
+  .footlogosection{
+    border-right: 2px solid #ccc;
+  }
+
+  .footlist1{
+    display: none;
+  }
+
+
+}
+
+
+
+
+
+.logohead{
+  width: 100%;
+}
+
+
+.footlist{
+  width: 95%;
+}
+
+.footlist1{
+  width: 100%;
+  padding: 0px 20px;
 }
 
 .footerbar{
@@ -17,15 +56,33 @@
   width: 80%;
   font-size: 12px;
   margin:auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 
 
   
+}
+
+.footlogosection{
+  width: 100%;
+}
+
+.footLogo{
+  background-image: url("../images/mainLogo.png");
+  width: 250px;
+  height: 96px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .fLists{
   width: 100%;
   display: flex;
   justify-content: space-between;
+  margin-left: 20px;
 }
 
 .fList{
@@ -37,4 +94,8 @@
   margin-bottom: 10px;
   color: #fff;
   cursor: pointer;
+}
+
+.fghghgh{
+  font-size: 12px;
 }

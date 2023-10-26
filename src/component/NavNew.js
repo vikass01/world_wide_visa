@@ -83,7 +83,7 @@ export default function NavNew() {
           <button className="adropbtn"><a>Visa<i className="fa-solid fa-angle-down"></i></a></button>
           <div className="adropdown-content">
                 <div className="aheader">
-                  <h2>Visa Menu</h2>
+                  <h2>VISA SERVICE FOR WORLD WIDE COUNTRIES</h2>
                 </div>
               <div className="arow">
               <div className="rowbox2">
@@ -94,29 +94,31 @@ export default function NavNew() {
                           <img src="https://www.manglishworld.com/_next/image?url=%2FM1.jpg&w=3840&q=75" alt="Mountains"/>
                           </div>
                           <div className="scroll-container-text">
-                              <h3>Visa</h3>
-                              <p>View all</p>
+                              <h6>Visa</h6>
+                              <h6>Apply Visa</h6>
+                              <h6>Check Eligibility</h6>
+                              <h6>View all</h6>
                           </div>
                       
                   </div>
                   <div className="rowbox1">
                       <div className="acolumn">
                         <h5>Category 1</h5>
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
+                        <a href="#">Tourist</a>
+                        <a href="#">Business</a>
+                        <a href="#">Work</a>
                       </div>
                       <div className="acolumn">
                         <h5>Category 2</h5>
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
+                        <a href="#">Electronic</a>
+                        <a href="#">Study</a>
+                        <a href="#">Medical</a>
                       </div>
                       <div className="acolumn">
                         <h5>Category 3</h5>
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
+                        <a href="#">China Group</a>
+                        <a href="#">CubaCard</a>
+                        <a href="#">Group Visa</a>
                       </div>
                   </div>
                   
@@ -134,21 +136,21 @@ export default function NavNew() {
                   <div className="rowbox1">
                       <div className="acolumn">
                         <h5>Category 1</h5>
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
+                        <a href="#">Australia</a>
+                        <a href="#">Canada</a>
+                        <a href="#">NewZealand</a>
                       </div>
                       <div className="acolumn">
                         <h5>Category 2</h5>
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
+                        <a href="#">USA</a>
+                        <a href="#">UK</a>
+                        <a href="#">Germany</a>
                       </div>
                       <div className="acolumn">
                         <h5>Category 3</h5>
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
+                        <a href="#">Asia</a>
+                        <a href="#">Europe</a>
+                        <a href="#">Hong Kong</a>
                       </div>
                   </div>
                   <div className="rowbox2">
@@ -185,9 +187,9 @@ export default function NavNew() {
         <div className="subnav">
           <button className="subnavbtn"><i className="fa-solid fa-bars"/></button>
           <div className="subnav-content">
+          <Link to="/">Home</Link>
             <Link to="/about">About</Link>
             <Link to="/tours">Tours</Link>
-            <Link to="/hotels">Package</Link>
             <Link to="/contact">Contact</Link>
           </div>
         </div>

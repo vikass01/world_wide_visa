@@ -11,7 +11,7 @@ body{
 
 .vertical-align{
 	position: relative;
-	top: 41%;
+	top: 46%;
 	transform: translateY(-50%);
 }
 
@@ -68,25 +68,33 @@ section{
 
  #home{
 
-background: url("../images/aboutback.jpg") fixed;
+/* background: url("../images/aboutback.jpg") fixed; */
 background-repeat: no-repeat;
 background-position: center;
 background-size: cover;
+background-color: #141e30;
 color: white;
 height: 600px;
 
  }
 
  .aboutlogo{
+	margin: 20px 0px;
 	background-image: url("../images/mainLogo.svg");
-	height: 100px;
+	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
 	border-radius: 10px;
+	
+	height: 68px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
  }
 
 .logo{
-	font-size: 72px;
+	font-size: 5vw;
+
 	font-weight: 100;
 	border-top: 1px solid white;
 	border-bottom: 1px solid white;
@@ -94,6 +102,28 @@ height: 600px;
 	padding: 0 20px 15px 20px;
 
 }
+
+@media (max-width: 400px) {
+    
+  .logo{
+	font-size: 10vw;
+  }
+
+  #home{
+	height: 318px;
+  }
+
+  .aboutlogo{
+	height: 56px;
+  }
+
+
+}
+
+
+
+
+
 
 #home h3{
 
@@ -186,11 +216,12 @@ display: inline-block;
 
 #skills{
 
-background: url("https://awesomewallpaper.files.wordpress.com/2013/03/img7.jpg")fixed;
+background: url("https://awesomewallpaper.files.wordpress.com/2013/03/img7.jpg") fixed;
 background-repeat: no-repeat;
 background-position: center;
 background-size: cover;
 color: white;
+
 
 
 }
@@ -479,7 +510,7 @@ body {
 	box-sizing: inherit;
   }
   
-  .column {
+  .abcolumn {
 	float: left;
 	width: 25%;
 	margin-bottom: 16px;
@@ -499,6 +530,10 @@ body {
   
   .container {
 	padding: 25px 16px;
+  }
+
+  .ghsdf{
+	margin-top: 40px;
   }
   
   .container::after, .row::after {
@@ -527,11 +562,19 @@ body {
   }
   
   @media screen and (max-width: 650px) {
-	.column {
+	.abcolumn {
+	  width: 50%;
+	  display: block;
+	}
+  }
+
+  @media screen and (max-width: 400px) {
+	.abcolumn {
 	  width: 100%;
 	  display: block;
 	}
   }
+  
 
   .row{
 	display: flex;
@@ -543,27 +586,155 @@ body {
 
 
 
-/* <div class="container text-center support vertical-align">
-	    <div class="row">
-	    <div>
-	    	<h1>Our supported API's</h1>
-	    </div>
-	    	<div class="col-lg-3 col-md-3 col-sm-3 circle1">
-	    		
-	    		<img id="facebook" src="https://www.facebook.com/images/fb_icon_325x325.png">
-	    	</div>
-	    	<div class="col-lg-3 col-md-3 col-sm-3 circle1">
-	    		
-	    		<img id="twitter" src="https://cdn3.iconfinder.com/data/icons/social-icons-5/607/Twitterbird.png">
-	    	</div>
-	    	<div class="col-lg-3 col-md-3 col-sm-3 circle1">
-	    		
-	    		<img id="instagram" src="http://www.logotypes101.com/logos/752/46CB6EFDF45D02DF8C1AE688B5806F85/2016_instagram_logo.png">
-	    	</div>
-	    	<div class="col-lg-3 col-md-3 col-sm-3 circle1">
-	    		
-	    		<img id="google" src="http://www.freeiconspng.com/uploads/google-plus-icon--circle-iconset--martz90-20.png">
-	    	</div>	
-	    </div>	
-	    	
-	</div> */
+
+  /* 0000000000000000000000000000000000000000000000000000000000000000000000000000000 */
+
+
+  /* Slideshow container */
+.slideshow-container {
+	position: relative;
+	background: #f1f1f1f1;
+  }
+  
+  /* Slides */
+  .mySlides {
+	padding: 50px;
+	text-align: center;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	margin-top: -30px;
+	padding: 16px;
+	color: #888;
+	font-weight: bold;
+	font-size: 20px;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+	position: absolute;
+	right: 0;
+	border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+	background-color: rgba(0,0,0,0.8);
+	color: white;
+  }
+  
+  /* The dot/bullet/indicator container */
+  .dot-container {
+	text-align: center;
+	padding: 20px;
+	background: #ddd;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+  }
+  
+  /* Add a background color to the active dot/circle */
+  .active, .dot:hover {
+	background-color: #717171;
+  }
+  
+  /* Add an italic font style to all quotes */
+  q {
+	font-style: italic;
+	color: black;
+}
+  
+  /* Add a blue color to the author */
+  .author {
+	color: blue;
+	font-size: 16px;
+}
+
+.authordiv{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.profile{
+	background-size: cover;
+	background-position: center;
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+	margin: 15px 0px;
+
+}
+
+.author1{
+	background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLs8R1pvb1aUlkltBCpZRao9kJwMcEbPARZg&usqp=CAU");
+}
+
+.author2{
+	background-image: url("https://media.licdn.com/dms/image/C4E03AQHqjjvwL8ahGA/profile-displayphoto-shrink_800_800/0/1517721687804?e=2147483647&v=beta&t=wlyvneRehdTmdU2sjONQAaHexJMo0XhMnSNyeiwIQv4");
+}
+
+.author3{
+	background-image: url("https://nbcsports.brightspotcdn.com/dims4/default/9a6f086/2147483647/strip/true/crop/5578x3138+0+133/resize/1440x810!/quality/90/?url=https%3A%2F%2Fnbc-sports-production-nbc-sports.s3.us-east-1.amazonaws.com%2Fbrightspot%2Fe3%2Fd7%2F9a427da34794b73f12ea474fe937%2Fhttps-delivery-gettyimages.com%2Fdownloads%2F1612059413");
+}
+
+.author4{
+	background-image: url("https://m.media-amazon.com/images/I/61BjJOnt7yL._AC_UY1100_.jpg");
+}
+
+.author5{
+	background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT4ADgntChdGnCPAaEgtRNNCiPxxprBO46D__5GEjj6ix_igKjbe5w2Iz9FW4s7z_1h9g&usqp=CAU");
+}
+
+.author6{
+	background-image: url("https://a10.gaanacdn.com/gn_img/artists/a7LWBkzbzX/a7LWBkzbzX/size_xl_1516780880.webp");
+}
+
+
+
+
+ /* 000000000000000000000000000000000000000000000000000000000000000000000000000000000 */
+
+ 
+.swiper {
+	width: 100%;
+	height: 100%;
+  }
+  
+  .swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+  
+	/* Center slide text vertically */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  .swiper-slide img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+  }
+
+
+
+ /* 00000000000000000000000000000000000000000000000000000000 */

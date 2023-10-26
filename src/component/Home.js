@@ -226,7 +226,7 @@ export default function Home() {
               </h2>
               <ul className="biometrics__List-sc-1qjc3xo-6 iOzoBu">
                 <li className="biometrics__ListItem-sc-1qjc3xo-7 bSoyTd">
-                  <b>Finland, Austria, Czech Republic, Lithuania, Slovenia, Denmark, Iceland {/* */}:</b><br />February 26, March 24
+                  <b>Finland, Austria, Czech Republic, Lithuania, Slovenia, Denmark, Iceland :</b><br />February 26, March 24
                 </li>
                 <li className="biometrics__ListItem-sc-1qjc3xo-7 bSoyTd">
                   <b>Spain {/* */}:</b><br />March 17, April 6
@@ -236,7 +236,7 @@ export default function Home() {
                 </li>
               </ul>
               <button className="styled__PulseBtn-sc-1ji51nh-3 caLgOF">
-                Submit your application
+                Submit visa application
               </button>
             </div>
           </div>
@@ -325,7 +325,7 @@ export default function Home() {
           <h2 className="styled__Title-sc-1ji51nh-2 tours__Title-bhr5fb-2 bUWTBM">
             International Holidays
           </h2>
-          <button className="styled__PulseBtn-sc-1ji51nh-3 tours__Button-bhr5fb-3 kYYayU">
+          <button className="kYYayU">
             Choose a tour
           </button>
           <div className="tours__Overlay-bhr5fb-1 jzexuY" />

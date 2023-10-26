@@ -13,6 +13,7 @@
     "@testing-library/user-event": "^13.5.0",
     "country-flag-icons": "^1.5.7",
     "date-fns": "^2.28.0",
+    "mdb-react-ui-kit": "^6.3.0",
     "react": "^18.2.0",
     "react-date-range": "^1.4.0",
     "react-dom": "^18.2.0",
@@ -21,6 +22,7 @@
     "react-scripts": "^5.0.1",
     "react-top-loading-bar": "^2.3.1",
     "styled-components": "^6.0.8",
+    "swiper": "^11.0.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
