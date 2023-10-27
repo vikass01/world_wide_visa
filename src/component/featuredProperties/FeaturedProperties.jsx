@@ -3,6 +3,7 @@ import "./featuredProperties.css";
 const FeaturedProperties = () => {
   return (
     <div className="fp">
+      <div className="fpscroll">
       <div className="fpItem">
         <img
           src="https://cf.bstatic.com/xdata/images/hotel/square600/13125860.webp?k=e148feeb802ac3d28d1391dad9e4cf1e12d9231f897d0b53ca067bde8a9d3355&o=&s=1"
@@ -45,6 +46,8 @@ const FeaturedProperties = () => {
           <span>Excellent</span>
         </div>
       </div>
+
+
       <div className="fpItem">
         <img
           src="https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/flyfish/raw/NH74105209700838/QS1042/QS1042-Q1/1653896863747.jpeg"
@@ -58,6 +61,189 @@ const FeaturedProperties = () => {
           <button>8.9</button>
           <span>Excellent</span>
         </div>
+      </div>
+
+
+      <div className="fpItem">
+        <img
+          src="https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/flyfish/raw/NH74105209700838/QS1042/QS1042-Q1/1653896863747.jpeg"
+          alt=""
+          className="fpImg"
+        />
+        <span className="fpName">Hilton Garden Inn</span>
+        <span className="fpCity">Berlin</span>
+        <span className="fpPrice">Starting from $105</span>
+        <div className="fpRating">
+          <button>8.9</button>
+          <span>Excellent</span>
+        </div>
+      </div>
+
+
+      <div className="fpItem">
+        <img
+          src="https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/flyfish/raw/NH74105209700838/QS1042/QS1042-Q1/1653896863747.jpeg"
+          alt=""
+          className="fpImg"
+        />
+        <span className="fpName">Hilton Garden Inn</span>
+        <span className="fpCity">Berlin</span>
+        <span className="fpPrice">Starting from $105</span>
+        <div className="fpRating">
+          <button>8.9</button>
+          <span>Excellent</span>
+        </div>
+      </div>
+
+
+      <div className="fpItem">
+        <img
+          src="https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/flyfish/raw/NH74105209700838/QS1042/QS1042-Q1/1653896863747.jpeg"
+          alt=""
+          className="fpImg"
+        />
+        <span className="fpName">Hilton Garden Inn</span>
+        <span className="fpCity">Berlin</span>
+        <span className="fpPrice">Starting from $105</span>
+        <div className="fpRating">
+          <button>8.9</button>
+          <span>Excellent</span>
+        </div>
+      </div>
+
+
+      <div className="fpItem">
+        <img
+          src="https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/flyfish/raw/NH74105209700838/QS1042/QS1042-Q1/1653896863747.jpeg"
+          alt=""
+          className="fpImg"
+        />
+        <span className="fpName">Hilton Garden Inn</span>
+        <span className="fpCity">Berlin</span>
+        <span className="fpPrice">Starting from $105</span>
+        <div className="fpRating">
+          <button>8.9</button>
+          <span>Excellent</span>
+        </div>
+      </div>
+
+
+      <div className="fpItem">
+        <img
+          src="https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/flyfish/raw/NH74105209700838/QS1042/QS1042-Q1/1653896863747.jpeg"
+          alt=""
+          className="fpImg"
+        />
+        <span className="fpName">Hilton Garden Inn</span>
+        <span className="fpCity">Berlin</span>
+        <span className="fpPrice">Starting from $105</span>
+        <div className="fpRating">
+          <button>8.9</button>
+          <span>Excellent</span>
+        </div>
+      </div>
+
+
+      <div className="fpItem">
+        <img
+          src="https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/flyfish/raw/NH74105209700838/QS1042/QS1042-Q1/1653896863747.jpeg"
+          alt=""
+          className="fpImg"
+        />
+        <span className="fpName">Hilton Garden Inn</span>
+        <span className="fpCity">Berlin</span>
+        <span className="fpPrice">Starting from $105</span>
+        <div className="fpRating">
+          <button>8.9</button>
+          <span>Excellent</span>
+        </div>
+      </div>
+
+
+      <div className="fpItem">
+        <img
+          src="https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/flyfish/raw/NH74105209700838/QS1042/QS1042-Q1/1653896863747.jpeg"
+          alt=""
+          className="fpImg"
+        />
+        <span className="fpName">Hilton Garden Inn</span>
+        <span className="fpCity">Berlin</span>
+        <span className="fpPrice">Starting from $105</span>
+        <div className="fpRating">
+          <button>8.9</button>
+          <span>Excellent</span>
+        </div>
+      </div>
+
+
+      <div className="fpItem">
+        <img
+          src="https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/flyfish/raw/NH74105209700838/QS1042/QS1042-Q1/1653896863747.jpeg"
+          alt=""
+          className="fpImg"
+        />
+        <span className="fpName">Hilton Garden Inn</span>
+        <span className="fpCity">Berlin</span>
+        <span className="fpPrice">Starting from $105</span>
+        <div className="fpRating">
+          <button>8.9</button>
+          <span>Excellent</span>
+        </div>
+      </div>
+
+
+      <div className="fpItem">
+        <img
+          src="https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/flyfish/raw/NH74105209700838/QS1042/QS1042-Q1/1653896863747.jpeg"
+          alt=""
+          className="fpImg"
+        />
+        <span className="fpName">Hilton Garden Inn</span>
+        <span className="fpCity">Berlin</span>
+        <span className="fpPrice">Starting from $105</span>
+        <div className="fpRating">
+          <button>8.9</button>
+          <span>Excellent</span>
+        </div>
+      </div>
+
+
+      <div className="fpItem">
+        <img
+          src="https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/flyfish/raw/NH74105209700838/QS1042/QS1042-Q1/1653896863747.jpeg"
+          alt=""
+          className="fpImg"
+        />
+        <span className="fpName">Hilton Garden Inn</span>
+        <span className="fpCity">Berlin</span>
+        <span className="fpPrice">Starting from $105</span>
+        <div className="fpRating">
+          <button>8.9</button>
+          <span>Excellent</span>
+        </div>
+      </div>
+
+
+      <div className="fpItem">
+        <img
+          src="https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/flyfish/raw/NH74105209700838/QS1042/QS1042-Q1/1653896863747.jpeg"
+          alt=""
+          className="fpImg"
+        />
+        <span className="fpName">Hilton Garden Inn</span>
+        <span className="fpCity">Berlin</span>
+        <span className="fpPrice">Starting from $105</span>
+        <div className="fpRating">
+          <button>8.9</button>
+          <span>Excellent</span>
+        </div>
+      </div>
+
+
+      
+
+
+
       </div>
     </div>
   );

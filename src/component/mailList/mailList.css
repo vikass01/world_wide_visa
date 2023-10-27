@@ -20,11 +20,20 @@
 }
 
 .mailInputContainer>button{
-  height: 50px;
+  height: 29px;
+  width: 100px;
   background-color: #0071c2;
   color: white;
   font-weight: 500;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.mailInputContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
 }

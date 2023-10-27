@@ -49,29 +49,25 @@ const Header = ({ type }) => {
 
   return (
     <div className="header">
-      <div
-        className={
-          type === "list" ? "headerContainer listMode" : "headerContainer"
-        }
-      >
+      <div className= "headerContainer">
         <div className="headerList">
           <div className="headerListItem active">
           <i class="fa-solid fa-snowman"></i>
             <span>Destinations</span>
           </div>
-          <div className="headerListItem ghjyi">
+          <div className="headerListItem icon1">
             <FontAwesomeIcon icon={faPlane} />
             <span>Flights</span>
           </div>
-          <div className="headerListItem ghjyi">
+          <div className="headerListItem icon2">
             <FontAwesomeIcon icon={faCar} />
             <span>Car rentals</span>
           </div>
-          <div className="headerListItem ghjyi">
+          <div className="headerListItem icon3">
             <FontAwesomeIcon icon={faBed} />
             <span>Attractions</span>
           </div>
-          <div className="headerListItem ghjyi">
+          <div className="headerListItem icon4">
             <FontAwesomeIcon icon={faTaxi} />
             <span>Airport taxis</span>
           </div>
@@ -83,26 +79,29 @@ const Header = ({ type }) => {
             </h1>
             <p className="headerDesc">
               Get rewarded for your travels – unlock instant savings of 10% or
-              more with a free Lamabooking account
+              more with a free account
             </p>
             {/* <button className="headerBtn">Sign in / Register</button> */}
+            
             <div className="headerSearch">
-              <div className="headerSearchItem">
-                <FontAwesomeIcon icon={faBed} className="headerIcon" />
-                <input style={{color:"black"}}
-                  type="text"
-                  placeholder="Where are you going?"
-                  className="headerSearchInput"
-                  onChange={(e) => setDestination(e.target.value)}
-                />
-              </div>
-              <div className="headerSearchItem"></div>
-              <div className="headerSearchItem"></div>
-              <div className="headerSearchItem">
-                <button className="headerBtn" onClick={handleSearch}>
-                  Search
-                </button>
-              </div>
+            <div className="searchset">
+
+                    <div className="headerSearchItem">
+                      <input style={{color:"black"}}
+                        type="text"
+                        placeholder="Where are you going?"
+                        className="headerSearchInput"
+                        onChange={(e) => setDestination(e.target.value)}
+                      />
+                    </div>
+              
+                    <div className="headerSearchItem">
+                      <button className="headerBtn" onClick={handleSearch}>
+                        Search
+                      </button>
+                    </div>
+              
+            </div>
             </div>
           </>
         )}

@@ -189,6 +189,12 @@ for (i = 0; i < acc.length; i++) {
               </ul>
             </div>
             <ul className="sci">
+              <li className='visa'></li>
+              <li className='ttour'></li>
+              <li className='sstudy'></li>
+              <li className='iimmigration'></li>
+            </ul>
+            <ul className="sci">
               <li className='one'></li>
               <li className='two'></li>
               <li className='three'></li>
@@ -199,16 +205,14 @@ for (i = 0; i < acc.length; i++) {
 
           <form ref={forms} onSubmit={sendEmail} id='myForm'>
           <div className={"contactForm1"}>
-            <h2>Send a Message</h2>
+            <h2>Send a Message | Apply for Visa | Apply for study abroad</h2>
+            <span>Contact us | Raise queries | Immigration support</span>
             <div className="formBox">
               <div className="inputBox w50">
                 <input type="text" value={name} name='user_name' onChange={(event)=>{setname(event.target.value)}} required />
-                <span>First Name</span>
+                <span>Full Name</span>
               </div>
-              <div className="inputBox w50">
-                <input type="text" value={lname} name='user_lName' onChange={(event)=>{setlname(event.target.value)}} required />
-                <span>Last Name</span>
-              </div>
+              
               <div className="inputBox w50">
                 <input type="email" value={email} name='user_email' onChange={(event)=>{setemail(event.target.value)}} required />
                 <span>Email Address</span>
@@ -216,6 +220,24 @@ for (i = 0; i < acc.length; i++) {
               <div className="inputBox w50">
                 <input type="text" value={mobile} name='user_mobile' onChange={(event)=>{setmobile(event.target.value)}} required />
                 <span>Mobile Number</span>
+              </div>
+              
+              <div className="inputBox w50">
+              {/* <label for="products">Apply for:</label> */}
+
+                    <select name="productoptions" id="products">
+                      <option value="">Select your query</option>
+                      <option value="visa">Visa</option>
+                      <option value="study">Study</option>
+                      <option value="tour">Tours</option>
+                      <option value="immigration">Immigration</option>
+                    </select>
+
+               
+              </div>
+              <div className="inputBox w100">
+                <input type="text" value={lname} name='user_lName' onChange={(event)=>{setlname(event.target.value)}} required />
+                <span>Address</span>
               </div>
               <div className="inputBox w100">
                 <textarea required defaultValue={msg} name='user_msg' onChange={(event)=>{setmsg(event.target.value)}} />

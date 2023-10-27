@@ -96,6 +96,42 @@
     background-color:  white;
 }
 
+.visa{
+    height: 30px;
+    width: 70px;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Visa_Logo.png/640px-Visa_Logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.ttour{
+    height: 30px;
+    width: 70px;
+    background-image: url("https://seeklogo.com/images/B/beach-tour-logo-4505456896-seeklogo.com.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.sstudy{
+    height: 30px;
+    width: 70px;
+    background-image: url("https://static.vecteezy.com/system/resources/thumbnails/009/383/394/small/graduation-clipart-design-illustration-free-png.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.iimmigration{
+    height: 30px;
+    width: 70px;
+    background-image: url("https://www.eiffelimmigration.com/wp-content/uploads/2021/07/emlnnnnVn7zmhUuZ5-LCSMDj-1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 
 .containercontact
 {
@@ -271,7 +307,8 @@
 }
 
 .containercontact .contactForm1 .formBox .inputBox input,
-.containercontact .contactForm1 .formBox .inputBox textarea 
+.containercontact .contactForm1 .formBox .inputBox textarea, 
+.containercontact .contactForm1 .formBox .inputBox select 
 {
     width: 100%;
     resize: none;
@@ -332,7 +369,7 @@
 }
 
 /* make the form responsive */
-@media (max-width: 1200px)
+/* @media (max-width: 1200px)
 {
     .containercontact
     {
@@ -345,16 +382,18 @@
     .containercontact .contactInfo
     {
         
-        height: 550px;
+        height: 70vh;
         position: relative;
         box-shadow: none;
         border-radius: 0px;
+        display: flex;
+        flex-direction: column;
     }
 
     .containercontact .contactForm1
     {
         position: relative;
-        /* width: calc(100% - 350px); */
+        
         padding-left: 0;
         margin-left: 0;
         padding: 40px;
@@ -362,9 +401,9 @@
         box-shadow: none;
         border-radius: 0px;
     }
-}
+} */
 
-@media (max-width: 991px)
+/* @media (max-width: 991px)
 {
     .contactbox
     {
@@ -389,7 +428,7 @@
     .containercontact .contactForm1
     {
         width: 100%;
-        /* height: 200px; */
+        height: 200px;
         border-radius: 0px;
     }
 
@@ -405,9 +444,9 @@
        position: relative;
        display: flex;
     }
-}
+} */
 
-@media (max-width: 600px)
+/* @media (max-width: 600px)
 {
     .containercontact .contactForm1
     {
@@ -418,18 +457,21 @@
         padding: 25px;
         flex-direction: column;
         align-items: flex-start;
+        justify-content: center;
+        align-items: center;
     }
 
     .containercontact .contactInfo ul.sci
     {
         margin-top: 40px;
+        width: 100%;
     }
 
     .containercontact .contactForm1 .formBox .inputBox.w50
     {
         width: 100%;
     }
-}
+} */
 
 .fthyj{
     width: 100%;
@@ -532,8 +574,8 @@
     overflow: scroll;
   }
 
-  @media  (min-width: 0px) and (max-width: 414px) {
-    /* .containercontact{
+  /* @media  (min-width: 0px) and (max-width: 414px) {
+    .containercontact{
         top: 150px;
     }
     
@@ -543,5 +585,5 @@
 
     .contactbox{
         background: red;
-    } */
-  }
+    }
+  } */

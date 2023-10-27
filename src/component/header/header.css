@@ -10,6 +10,7 @@
   width: 100%;
   max-width: 1024px;
   margin: 20px 0px 100px 0px;
+
 }
 
 .headerContainer.listMode {
@@ -47,19 +48,32 @@
   cursor: pointer;
 }
 
+
+
 .headerSearch {
   height: 55px;
-  background-color: white;
-  border: 3px solid #febb02;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding: 10px 0px;
-  border-radius: 5px;
   position: absolute;
   bottom: -25px;
   width: 100%;
   max-width: 1024px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.searchset{
+  background-color: #fff;
+  position: absolute;
+  left: 5%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  width: 90%;
+  border: 3px solid #febb02;
+
+
 }
 
 .headerIcon {
@@ -75,6 +89,8 @@
 .headerSearchInput {
   border: none;
   outline: none;
+  width: 90%;
+  padding-left:10px ;
 }
 
 .headerSearchText {
@@ -128,13 +144,37 @@
 }
 
 @media  (min-width: 0px) and (max-width: 450px) {
-  .ghjyi, .listSearch{
+  .ghjyi{
     display: none;
   }
-  
-
-  
 }
+
+
+@media  (min-width: 0px) and (max-width: 700px) {
+  .icon4{
+    display: none;
+  }
+}
+
+@media  (min-width: 0px) and (max-width: 618px) {
+  .icon3{
+    display: none;
+  }
+}
+
+@media  (min-width: 0px) and (max-width: 468px) {
+  .icon2{
+    display: none;
+  }
+}
+
+
+@media  (min-width: 0px) and (max-width: 320px) {
+  .icon1{
+    display: none;
+  }
+}
+
 
 .headerList, .headerTitle, .headerDesc {
   padding: 0px 20px;

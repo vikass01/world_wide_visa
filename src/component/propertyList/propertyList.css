@@ -4,18 +4,31 @@
   display: flex;
   justify-content: space-between;
   gap: 20px;
+  overflow-x: scroll;
+}
+
+.pListscroll{
+  display: flex;
+  width: 1000%;
+  padding: 0px 3px;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .pListItem{
   flex:1;
+  width: 150px;
+  height: 200px;
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
+  margin-right: 10px;
 }
 
 .pListImg{
-  width: 100%;
+  width: 150px;
   height: 150px;
+
   object-fit: cover;
 }
 
