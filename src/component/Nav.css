@@ -5,6 +5,25 @@
   font-family: 'AR One Sans', sans-serif;
 }
 
+.djklds{
+  height: auto;
+  width: 100%;
+  overflow-x: scroll;
+  padding: 10px 5px;
+  background-color: #fafafa;
+  text-align: center;
+}
+
+.djkld{
+  height: auto;
+  width: 100%;
+  overflow-x: scroll;
+  padding: 10px 5px;
+  text-align: center;
+}
+
+
+
 
 
 
@@ -205,7 +224,7 @@
   /* sc-component-id: continents__Section-mu4rdf-0 */
   .kELZqj {
     height: auto;
-    padding: 50px 15px;
+    padding: 20px 15px;
     background-color: #fafafa;
     text-align: center;
   }
@@ -281,7 +300,6 @@
   }
   /* sc-component-id: biometrics__Section-sc-1qjc3xo-0 */
   .iwBKEP {
-    height: 500px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -292,6 +310,21 @@
     justify-content: flex-end;
     background: linear-gradient(to left, #8f94fb, #93cede);
   }
+
+  .iwBKE {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to left, #8f94fb, #93cede);
+  }
+
+
+
+
+
+
   @media (max-width: 723px) {
     .iwBKEP {
       text-align: center;
@@ -301,7 +334,6 @@
   }
   /* sc-component-id: biometrics__TextSection-sc-1qjc3xo-1 */
   .eFpeKG {
-    width: 45%;
     background-color: #fff;
     height: 100%;
     position: relative;
@@ -1080,7 +1112,7 @@
   }
   .img3 { background-image: url("./images/study/immigration1.jpg"); 
   }
-  .img4 { background-image: url("./images/tour/tour2.png"); 
+  .img4 { background-image: url("./images/study//study3.jpg"); 
   }
   .img5 { background-image: url("./images/tour/tour3.jpg");
   }
@@ -1093,3 +1125,85 @@
 
   
   /* 000000000000000000000000000000000000000000000000000 */
+
+  .newSwiper {
+    width: 800px;
+  }
+  .newSwiper .swiper-slide {
+    height: 177px;
+    background: #882525;
+    line-height: 300px;
+    text-align: center;
+    background-image: url("https://www.immigrationxperts.com/wp-content/themes/immigrationxperts/images/TOURIST-VISA.jpg");
+    background-position: center;
+    background-size: contain;
+    border: 1px solid black;
+    margin-right: 5px;
+    border-radius: 10px;
+  }
+  .newSwiper .swiper-slide:nth-child(2) {
+    background: #8acc7d;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLYw12qEBh34app-98MW5ADsSHKgVaGYjDAg&usqp=CAU");
+    background-position: center;
+    background-size: contain;
+    
+  }
+  .newSwiper .swiper-slide:nth-child(3) {
+    background: #b7cc7d;
+    background-image: url("https://media.licdn.com/dms/image/D4D12AQGF_K-iAsDtRQ/article-cover_image-shrink_600_2000/0/1692609206411?e=2147483647&v=beta&t=ZqPNWS6lyDJ5_dM2pbd6fjIbpe5c35-oculKY_NdIEY");
+    background-position: center;
+    background-size: contain;
+  }
+  .newSwiper .swiper-slide:nth-child(4) {
+    background: #9eb75c;
+    background-image: url("https://siuk-india.s3.amazonaws.com/assets/study-guide/priority-super-priority-student-visa.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+  .newSwiper .swiper-slide:nth-child(5) {
+    background: #7da8cc;
+    background-image: url("https://iraimmigration.com/upload/service/5cd67784367080915604b404f1671d5e.png");
+    background-position: center;
+    background-size: contain;
+  }
+  .newSwiper .swiper-slide:nth-child(6) {
+    background: #96cc7d;
+    background-image: url("https://www.visasoftheworld.in/blog/wp-content/uploads/2017/07/German-Visa-Information-1024x614.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+  .newSwiper .swiper-slide:nth-child(7) {
+    background: #cc7dae;
+    background-image: url("https://www.goindigo.in/content/dam/indigov2/6e-website/header/visa/hong-kong-hk-visa-mweb.jpg");
+    background-position: center;
+    background-size: contain;
+  }
+  .newSwiper .swiper-slide:nth-child(8) {
+    background: #c02183;
+    background-image: url("https://blog.raynatours.com/wp-content/uploads/2019/01/Poland-Visa-From-Dubai.jpg");
+    background-position: center;
+    background-size: contain;
+  }
+  .newSwiper .swiper-slide:nth-child(9) {
+    background: #5f0a3e;
+    background-image: url("https://miro.medium.com/v2/resize:fit:1400/1*1SQXVZH3kzUfe_Hh-R9Usw.png");
+    background-position: center;
+    background-size: contain;
+  }
+  .newSwiper .swiper-slide:nth-child(10) {
+    background: transparent;
+    border: none;
+  }
+  .newSwiper .swiper-slide:nth-child(11) {
+    background: transparent;
+    border: none;
+  }
+
+  /* 00000000000000000000000000000000000000000000000000000000000000000 */
+
+
+
+
+
+
+  /* 00000000000000000000000000000000000000000000000000000000000000 */

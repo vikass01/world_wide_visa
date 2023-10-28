@@ -192,11 +192,9 @@ export default function NavNew() {
 
         {mobsub && 
           <div className="subnav-content">
-          
+            <Link to="/" onClick={()=>{setmobsub(false)}}>Home</Link>
             <Link to="/about" onClick={()=>{setmobsub(false)}}>About</Link>
             <Link to="/tours" onClick={()=>{setmobsub(false)}}>Tours</Link>
-            <Link to="/visa" onClick={()=>{setmobsub(false)}}>Visa</Link>
-            <Link to="/study" onClick={()=>{setmobsub(false)}}>Study</Link>
             <Link to="/contact" onClick={()=>{setmobsub(false)}}>Contact</Link>
           </div>
         }

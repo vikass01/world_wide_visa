@@ -5,6 +5,15 @@ import './clock/newdelhi/clock.css';
 import { useEffect,useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { useState } from 'react';
+import { Link } from "react-router-dom";
+
+
+
+
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
 
 
 
@@ -180,7 +189,7 @@ export default function Home() {
 
 
         {/* 00000000000000000000000000000000000 */}
-        {/* <div height="auto" id="continents" className="kELZqj">
+        <div height="auto" id="continents" className="kELZqj">
           <div className="bQcjpC">
             <h2 className="kYBuig">
               Where will we go?
@@ -194,24 +203,37 @@ export default function Home() {
             </div>
             <p>Select continent for more details</p>
           </div>
-        </div> */}
+        </div>
+
+        {/* 000000000000000000000000000000000000000000000000000000000000000 */}
 
 
+        
 
+        {/* 000000000000000000000000000000000000000000000000000000000000000000000 */}
+
+
+                
         <div height="auto" className="kELZqj">
-          <div className="bQcjpC">
-            <h2 className="kYBuig">
-              Where will we go?
-            </h2>
-            <br/>
-            <div className="dgFnke">
-              <a className="jeUIoc" to='/'><p>Europe</p>
-                <div className="cpzfEQ" /></a><a className="jeUIoc"><p>Asia</p>
-                <div className="cgDwQz" /></a><a className="jeUIoc"><p>Australia</p>
-                <div className="fjUZAo" /></a>
-            </div>
-            <p>Select continent for more details</p>
-          </div>
+              <h3>
+                Apply Visa For anywhere in the world | Get fast approval | t & c apply
+              </h3>
+              <div className="djklds">
+              <Swiper watchSlidesProgress={true} slidesPerView={3} className="newSwiper">
+                <SwiperSlide></SwiperSlide>
+                <SwiperSlide></SwiperSlide>
+                <SwiperSlide></SwiperSlide>
+                <SwiperSlide></SwiperSlide>
+                <SwiperSlide></SwiperSlide>
+                <SwiperSlide></SwiperSlide>
+                <SwiperSlide></SwiperSlide>
+                <SwiperSlide></SwiperSlide>
+                <SwiperSlide></SwiperSlide>
+                <SwiperSlide></SwiperSlide>
+                <SwiperSlide></SwiperSlide>
+              </Swiper>
+              </div>
+              
         </div>
 
         {/* 0000000000000000000000000000000000000000000000000000 */}
@@ -235,12 +257,14 @@ export default function Home() {
                   <b>Latvia, Hungary{/* */}:</b><br />any weekday!
                 </li>
               </ul>
-              <button className="styled__PulseBtn-sc-1ji51nh-3 caLgOF">
-                Submit visa application
+              <button className="caLgOF"  >
+                <Link to='/contact' style={{textDecoration:"none", color:"white"}}>Submit visa application</Link>
               </button>
             </div>
           </div>
         </div>
+
+
         <div height="auto" id="advantages" className="styled__Section-sc-1ji51nh-0 dRCKEU">
                 <div className="styled__Container-sc-1ji51nh-1 bQcjpC">
                       <h2 className="styled__Title-sc-1ji51nh-2 advantages__Title-sc-1rvjoc-0 iTdKte">
@@ -320,13 +344,22 @@ export default function Home() {
               </div>       
         </div>   
       </div>
+
+      {/* 0000000000000000000000000000000000000000000 */}
+
+      
+
+
+
+
+      {/* 00000000000000000000000000000000000000000000000 */}
         
         <div id="tours" className="styled__Section-sc-1ji51nh-0 tours__Section-bhr5fb-0 hxJnWr">
           <h2 className="styled__Title-sc-1ji51nh-2 tours__Title-bhr5fb-2 bUWTBM">
             International Holidays
           </h2>
-          <button className="kYYayU">
-            Choose a tour
+          <button className="kYYayU"><Link to='/contact' style={{textDecoration:"none", color:"white"}}>
+            Choose a tour</Link>
           </button>
           <div className="tours__Overlay-bhr5fb-1 jzexuY" />
         </div>
