@@ -9,33 +9,10 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
 
-.contactbox
-{   
-    height: 120vh;
-    background: linear-gradient(
-        to right,
-        rgba(238,222,146,255) 0%,
-        rgba(238,222,146,255) 50%,
-        #003580 50%,
-        #003580 100%   
-    );
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
 
 
-/* .contactbox::before
-{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 100%;
-    background: #fff38e;
-} */
+
+
 
 .locationicon {
     height: 30px;
@@ -132,27 +109,34 @@
     background-position: center;
 }
 
-
-.containercontact
-{
-    position: relative;
-    min-width: 1100px;
-    min-height: 550px;
+.contactbox
+{   
+    height: 100%;
+    width: 100%;
     display: flex;
-    z-index: 10;
-    /* border-radius: 22px; */
-    /* background-color: #fff; */
+    justify-content: center;
+    align-items: center;
+    background-color: #ddd;
 
 }
 
-.containercontact .contactInfo
+
+.containercontact
 {
-    position: absolute;
-    top: 40px;
-    width: 350px;
-    height: calc(100% - 80px);
+    margin: 100px 100px 100px 100px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+.contactInfo
+{
+   
+    
+    width: 330px;
+    height: 100%;
     background: #003580;
-    z-index: 1;
     padding: 40px;
     display: flex;
     justify-content: center;
@@ -162,20 +146,20 @@
     border-radius: 22px;
 }
 
-.containercontact .contactInfo h2
+.contactInfo h2
 {
     color: #fff;
     font-size:24px;
     font-weight: 500;
 }
 
-.containercontact .contactInfo ul.info 
+.contactInfo ul.info 
 {
    position: relative;
    margin: 20px 0; 
 }
 
-.containercontact .contactInfo ul.info li
+.contactInfo ul.info li
 {
    position: relative;
    list-style: none;
@@ -185,14 +169,14 @@
    align-items: flex-start;
 }
 
-.containercontact .contactInfo ul.info li span:nth-child(1)
+.contactInfo ul.info li span:nth-child(1)
 {
     width: 30px;
     min-width: 30px;
 }
 
 /* for gmail */
-.containercontact .contactInfo ul.info li span a
+.contactInfo ul.info li span a
 {
     color: #fff;
     text-decoration: none;
@@ -201,56 +185,54 @@
     
 }
 
-.containercontact .contactInfo ul.info li span:nth-child(1) img
+.contactInfo ul.info li span:nth-child(1) img
 {
     max-width: 100%;
     filter: invert(1);
 }
 
-.containercontact .contactInfo ul.info li span:nth-child(2)
+.contactInfo ul.info li span:nth-child(2)
 {
     color: #fff;
     margin-left: 10px;
     font-weight: 300;
 }
 
-.containercontact .contactInfo ul.sci
+.contactInfo ul.sci
 {
     position: relative;
     display: flex;
     justify-content: space-evenly;
     height: 30px;
     width: 250px;
+    margin-bottom: 40px;
 }
 
-.containercontact .contactInfo ul.sci li
+.contactInfo ul.sci li
 {
    list-style: none;  
    
 }
 
-.containercontact .contactInfo ul.sci li a
+.contactInfo ul.sci li a
 {
    text-decoration: none;
 }
 
-.containercontact .contactInfo ul.sci li a img
+.contactInfo ul.sci li a img
 {
    filter: invert(1);
 }
 
-.containercontact .contactForm1
+.contactForm1
 {
-    position: absolute;
-    padding: 70px 50px;
-    padding-left: 250px;
-    margin-left: 150px;
-      
-    width: calc(100% - 150px);
+    
+    padding: 40px;
     height: 100%;
     background: #fff; 
     box-shadow: 0 50px 50px rgba(0,0,0,0.25);
     border-radius: 22px;
+    border: 1px solid black;
 
 }
 
@@ -258,30 +240,27 @@
     display: none;
 }
 
-.containercontact .contactForm2
+.contactForm2
 {
-    position: absolute;
-    padding: 70px 50px;
-    padding-left: 250px;
-    margin-left: 150px;
-      
-    width: calc(100% - 150px);
+    padding: 40px;
+    min-height: 505px;
     height: 100%;
+    width: 100%;
     background: #fff; 
     box-shadow: 0 50px 50px rgba(0,0,0,0.25);
     border-radius: 22px;
 
-    overflow: scroll;
+    
 }
 
-.containercontact .contactForm1 h2
+.contactForm1 h2
 {
     color: #0f3959;
     font-size: 24px;
     font-weight: 500;
 }
 
-.containercontact .contactForm1 .formBox
+.formBox
 {
     position: relative;
     display: flex;
@@ -290,25 +269,25 @@
     padding-top: 30px;
 }
 
-.containercontact .contactForm1 .formBox .inputBox
+.inputBox
 {
     position: relative;
     margin-bottom: 35px;
 }
 
-.containercontact .contactForm1 .formBox .inputBox.w50
+.inputBox.w50
 {
     width: 47%;
 }
 
-.containercontact .contactForm1 .formBox .inputBox.w100
+.inputBox.w100
 {
     width: 100%;
 }
 
-.containercontact .contactForm1 .formBox .inputBox input,
-.containercontact .contactForm1 .formBox .inputBox textarea, 
-.containercontact .contactForm1 .formBox .inputBox select 
+.inputBox input,
+.inputBox textarea, 
+.inputBox select 
 {
     width: 100%;
     resize: none;
@@ -368,110 +347,6 @@
     background: #0d9480;
 }
 
-/* make the form responsive */
-/* @media (max-width: 1200px)
-{
-    .containercontact
-    {
-        width: 90%;
-        min-width: auto;
-        margin: 20px;
-        box-shadow: 0 20px 50px rgba(0,0,0,0.2);
-    }
-
-    .containercontact .contactInfo
-    {
-        
-        height: 70vh;
-        position: relative;
-        box-shadow: none;
-        border-radius: 0px;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .containercontact .contactForm1
-    {
-        position: relative;
-        
-        padding-left: 0;
-        margin-left: 0;
-        padding: 40px;
-        height: 639px;
-        box-shadow: none;
-        border-radius: 0px;
-    }
-} */
-
-/* @media (max-width: 991px)
-{
-    .contactbox
-    {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 150vh;
-        background: #fff38e;
-    }
-
-    .contactbox::before
-    {
-        display: none;
-    }
-
-    .containercontact
-    {
-        display: flex;
-        flex-direction: column-reverse;
-    }
-
-    .containercontact .contactForm1
-    {
-        width: 100%;
-        height: 200px;
-        border-radius: 0px;
-    }
-
-    .containercontact .contactInfo
-    {
-        width: 100%;
-        height: auto;
-        flex-direction: row;
-        border-radius: 0px;
-    }
-    .containercontact .contactInfo ul.sci
-    {
-       position: relative;
-       display: flex;
-    }
-} */
-
-/* @media (max-width: 600px)
-{
-    .containercontact .contactForm1
-    {
-        padding: 25px;
-    }
-
-    .containercontact .contactInfo{
-        padding: 25px;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .containercontact .contactInfo ul.sci
-    {
-        margin-top: 40px;
-        width: 100%;
-    }
-
-    .containercontact .contactForm1 .formBox .inputBox.w50
-    {
-        width: 100%;
-    }
-} */
 
 .fthyj{
     width: 100%;
@@ -533,12 +408,7 @@
     overflow: hidden;
   }
   
-  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-  /* .active, .accordion:hover {
-    background-color: #ccc;
-  } */
-  
-  /* Style the accordion panel. Note: hidden by default */
+
   .panel {
     padding: 0 18px;
     background-color: white;
@@ -571,19 +441,46 @@
   .bnhui{
     width: 100%;
     height: 300px;
-    overflow: scroll;
+    overflow-y: scroll;
   }
 
-  /* @media  (min-width: 0px) and (max-width: 414px) {
-    .containercontact{
-        top: 150px;
-    }
-    
-    .containercontact .contactForm1{
-        height: 626px;
+ 
+
+  @media  (min-width: 0px) and (max-width: 980px) {
+
+    .containercontact {
+        flex-direction: column-reverse;
     }
 
-    .contactbox{
-        background: red;
+    .inputBox.w50 {
+        width: 99%;
     }
-  } */
+
+    .contactInfo {
+        width: 100%;
+    } 
+   
+
+    
+  }
+
+
+  @media  (min-width: 0px) and (max-width: 450px) {
+    
+    .contactbox
+    {   
+        
+        background: linear-gradient(to left, #243b55, #141e30);
+
+    }
+
+    .contactForm1 {
+        position: relative;
+        top: -51px;
+    }
+    
+
+    
+  }
+
+  select:focus::-ms-value {background-color: white; color:#000;}

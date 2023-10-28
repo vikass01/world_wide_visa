@@ -9,7 +9,8 @@ export default function Contact() {
   const [email, setemail] = useState("");
   const [mobile, setmobile] = useState("");
   const [msg, setmsg] = useState("");
-  const [form, setform] = useState("hidden");
+  const [form, setform] = useState(true);
+  const [lastqueries, setlastqueries] = useState(false);
   const [requ, setrequ] = useState("");
 
 
@@ -110,7 +111,8 @@ for (i = 0; i < acc.length; i++) {
     
 
   const lastquery = ()=>{
-    setform("false")
+    setform(false)
+    setlastqueries(true)
     
   }
 
@@ -202,8 +204,8 @@ for (i = 0; i < acc.length; i++) {
             </ul>
           </div>
 
-
-          <form ref={forms} onSubmit={sendEmail} id='myForm'>
+      { form && 
+          <form ref={forms} onSubmit={sendEmail} id={form? "": form}>
           <div className={"contactForm1"}>
             <h2>Send a Message | Apply for Visa | Apply for study abroad</h2>
             <span>Contact us | Raise queries | Immigration support</span>
@@ -223,7 +225,6 @@ for (i = 0; i < acc.length; i++) {
               </div>
               
               <div className="inputBox w50">
-              {/* <label for="products">Apply for:</label> */}
 
                     <select name="productoptions" id="products">
                       <option value="">Select your query</option>
@@ -250,10 +251,11 @@ for (i = 0; i < acc.length; i++) {
             </div>
             </div>
             </form>
+          }
 
 
           {/* 00000000000000000000000000000000000000000000000000000000 */}
-
+              {lastqueries && 
                       <div className="contactForm2" id={form}>
 
 
@@ -282,6 +284,7 @@ for (i = 0; i < acc.length; i++) {
 
                            </div>
                      </div>
+                    }
 
 
 

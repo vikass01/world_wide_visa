@@ -10,6 +10,7 @@ import './navnew.css'
 export default function NavNew() {
 
   const [progress, setProgress] = useState(0);
+  const [mobsub, setmobsub] = useState(false);
   
   return (
     <>
@@ -83,7 +84,7 @@ export default function NavNew() {
           <button className="adropbtn"><a>Visa<i className="fa-solid fa-angle-down"></i></a></button>
           <div className="adropdown-content">
                 <div className="aheader">
-                  <h2>VISA SERVICE FOR WORLD WIDE COUNTRIES</h2>
+                  <h6>VISA SERVICE FOR WORLD WIDE COUNTRIES</h6>
                 </div>
               <div className="arow">
               <div className="rowbox2">
@@ -103,19 +104,19 @@ export default function NavNew() {
                   </div>
                   <div className="rowbox1">
                       <div className="acolumn">
-                        <h5>Category 1</h5>
+                        <h6>Category 1</h6>
                         <a href="#">Tourist</a>
                         <a href="#">Business</a>
                         <a href="#">Work</a>
                       </div>
                       <div className="acolumn">
-                        <h5>Category 2</h5>
+                        <h6>Category 2</h6>
                         <a href="#">Electronic</a>
                         <a href="#">Study</a>
                         <a href="#">Medical</a>
                       </div>
                       <div className="acolumn">
-                        <h5>Category 3</h5>
+                        <h6>Category 3</h6>
                         <a href="#">China Group</a>
                         <a href="#">CubaCard</a>
                         <a href="#">Group Visa</a>
@@ -130,24 +131,24 @@ export default function NavNew() {
           <button className="adropbtn"><a>Study<i className="fa-solid fa-angle-down"></i></a></button>
           <div className="adropdown-content">
                 <div className="aheader">
-                  <h2>WELCOME TO BRIGHT FUTURE ABROAD STUDIES</h2>
+                  <h6>WELCOME TO BRIGHT FUTURE ABROAD STUDIES</h6>
                 </div>
               <div className="arow">
                   <div className="rowbox1">
                       <div className="acolumn">
-                        <h5>Category 1</h5>
+                        <h6>Category 1</h6>
                         <a href="#">Australia</a>
                         <a href="#">Canada</a>
                         <a href="#">NewZealand</a>
                       </div>
                       <div className="acolumn">
-                        <h5>Category 2</h5>
+                        <h6>Category 2</h6>
                         <a href="#">USA</a>
                         <a href="#">UK</a>
                         <a href="#">Germany</a>
                       </div>
                       <div className="acolumn">
-                        <h5>Category 3</h5>
+                        <h6>Category 3</h6>
                         <a href="#">Asia</a>
                         <a href="#">Europe</a>
                         <a href="#">Hong Kong</a>
@@ -161,8 +162,10 @@ export default function NavNew() {
                           <img src="https://media.istockphoto.com/id/1185326263/photo/happy-student-in-london.jpg?s=612x612&w=0&k=20&c=SQHdU5QJpdgZ65uYc-LkYIC1F-vgfEk5ID3kN3o8L-0=" alt="Mountains"/>
                           </div>
                           <div className="scroll-container-text">
-                              <h3>Study</h3>
-                              <p>View all</p>
+                              <h6>Study</h6>
+                              <h6>Apply for abroad</h6>
+                              <h6>Check Eligibility</h6>
+                              <h6>View all</h6>
                           </div>
                       
                   </div>
@@ -185,13 +188,19 @@ export default function NavNew() {
         <Link onClick={() => setProgress(100)} to="/"><i className="fa-regular fa-user"></i></Link>
         {/* <Link onClick={() => setProgress(100)} to="/" ><i className="fa-solid fa-bars"></i></Link> */}
         <div className="subnav">
-          <button className="subnavbtn"><i className="fa-solid fa-bars"/></button>
+          <button className="subnavbtn" onClick={()=>{setmobsub(true)}}><i className="fa-solid fa-bars"/></button>
+
+        {mobsub && 
           <div className="subnav-content">
-          <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
-            <Link to="/tours">Tours</Link>
-            <Link to="/contact">Contact</Link>
+          
+            <Link to="/about" onClick={()=>{setmobsub(false)}}>About</Link>
+            <Link to="/tours" onClick={()=>{setmobsub(false)}}>Tours</Link>
+            <Link to="/visa" onClick={()=>{setmobsub(false)}}>Visa</Link>
+            <Link to="/study" onClick={()=>{setmobsub(false)}}>Study</Link>
+            <Link to="/contact" onClick={()=>{setmobsub(false)}}>Contact</Link>
           </div>
+        }
+
         </div>
       </div>
       </>
