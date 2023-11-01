@@ -6,11 +6,18 @@ import { useEffect,useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { useState } from 'react';
 import { Link } from "react-router-dom";
+// import Typewriter from 'typewriter-effect/dist/core';
+import { Typewriter } from 'react-simple-typewriter'
+import { useNavigate } from "react-router-dom";
+
 
 
 
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 // Import Swiper styles
 import "swiper/css";
@@ -21,6 +28,7 @@ import "swiper/css";
 export default function Home() {
 
   const [req, setreq] = useState("");
+  const navigate = useNavigate();
 
 
   
@@ -137,13 +145,64 @@ export default function Home() {
 
 
 
+//   var app = document.getElementById('app');
+
+// var typewriter = new Typewriter(app, {
+//   autoStart: true,
+//   loop: Infinity,
+  
+//   delay: 75
+// });
+
+// typewriter
+//   // .pauseFor(500)
+//   .typeString('Get fast Visas to any country!')
+//   .pauseFor(300)
+//   .deleteChars(26)
+//   .typeString('upto<strong> 50% </strong> attractive dicounts')
+//   .deleteAll()
+//   .typeString('Get complete support for abroad study')
+//   // .typeString('dgsdfgdfgdf ds sdg sdgdgg')
+//   .pauseFor(1000)
+//   .start();
+
+
+  
+
+
+
   return (
     <div>
 
     {/* 0000000000000000000000000000000 */}
         <div className="ehlOuW">
           <div className="ryIus">
-            <h1 size={30} className="jBPgjx">Visas and tours to any country!</h1>
+
+          
+
+                     <h1 size={30} className="jBPgjx" id='app'>
+                     <Typewriter
+            words={['Visas and tours to any country!', 'Upto 50% dicounts on tour', 'Make career with abroad study', 'Immigration facility']}
+            loop={Infinity}
+            cursor
+            cursorStyle='_'
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1000}
+            
+          />
+
+
+            
+
+            
+
+            {/* Visas and tours to any country! */}
+            
+            
+            
+            
+            </h1>
             
             <form autoComplete="off" ref={forms} onSubmit={sendEmail}>
               
@@ -190,7 +249,7 @@ export default function Home() {
 
         {/* 00000000000000000000000000000000000 */}
         <div height="auto" id="continents" className="kELZqj">
-          <div className="bQcjpC">
+          <div className="bQcjpC" onClick={()=>{navigate('/contact')}}>
             <h2 className="kYBuig">
               Where will we go?
             </h2>
@@ -214,12 +273,24 @@ export default function Home() {
 
 
                 
-        <div height="auto" className="kELZqj">
+        <div height="auto" className="kELZq dess">
               <h3>
-                Apply Visa For anywhere in the world | Get fast approval | t & c apply
+                Apply Visa for anywhere in the world 
               </h3>
-              <div className="djklds">
-              <Swiper watchSlidesProgress={true} slidesPerView={3} className="newSwiper">
+              <div className="djklds" onClick={()=>{navigate('/contact')}}>
+              <Swiper 
+              watchSlidesProgress={true} 
+              slidesPerView={3} 
+              autoplay={{
+                    delay: 2000,
+                    disableOnInteraction: false,
+                  }}
+              pagination={{
+                    clickable: true,
+                  }}
+              navigation={true}
+              modules={[Autoplay, Pagination, Navigation]} 
+              className="newSwiper">
                 <SwiperSlide></SwiperSlide>
                 <SwiperSlide></SwiperSlide>
                 <SwiperSlide></SwiperSlide>
@@ -237,8 +308,42 @@ export default function Home() {
         </div>
 
         {/* 0000000000000000000000000000000000000000000000000000 */}
-        <div id="biometrics" className="biometrics__Section-sc-1qjc3xo-0 iwBKEP">
+        <div id="biometrics" className="biometrics__Section-sc-1qjc3xo-0 iwBKEP" >
+          
           <div className="biometrics__TextSection-sc-1qjc3xo-1 eFpeKG">
+          <div height="auto" className="kELZq mobb" onClick={()=>{navigate('/contact')}}>
+              <h3>
+                Apply Visa For anywhere in the world | Get fast approval | t & c apply
+              </h3>
+              <div className="djklds">
+              <Swiper 
+              watchSlidesProgress={true} 
+              slidesPerView={3} 
+              autoplay={{
+                    delay: 2000,
+                    disableOnInteraction: false,
+                  }}
+              pagination={{
+                    clickable: true,
+                  }}
+              navigation={true}
+              modules={[Autoplay, Pagination, Navigation]}        
+              className="newSwiper">
+                <SwiperSlide></SwiperSlide>
+                <SwiperSlide></SwiperSlide>
+                <SwiperSlide></SwiperSlide>
+                <SwiperSlide></SwiperSlide>
+                <SwiperSlide></SwiperSlide>
+                <SwiperSlide></SwiperSlide>
+                <SwiperSlide></SwiperSlide>
+                <SwiperSlide></SwiperSlide>
+                <SwiperSlide></SwiperSlide>
+                <SwiperSlide></SwiperSlide>
+                <SwiperSlide></SwiperSlide>
+              </Swiper>
+              </div>
+              
+        </div>
             <img src= {fingerprint} className="biometrics__FingerPrintImg-sc-1qjc3xo-5 ebVVUT" /><svg x="0px" y="0px" width="300px" height="500px" viewBox="0 5 130 220" preserveAspectRatio="none" fill="#fff" className="biometrics__WaveStyled-sc-1qjc3xo-2 eoBsPU">
               <path d="M144.61,227.27V0.5H99.89c0,0-57.79,36.01-44.2,119.49S2.88,227.27,2.88,227.27H144.61z" />
             </svg>
@@ -358,7 +463,7 @@ export default function Home() {
           <h2 className="styled__Title-sc-1ji51nh-2 tours__Title-bhr5fb-2 bUWTBM">
             International Holidays
           </h2>
-          <button className="kYYayU"><Link to='/contact' style={{textDecoration:"none", color:"white"}}>
+          <button className="kYYayU"><Link to='/tours' style={{textDecoration:"none", color:"white"}}>
             Choose a tour</Link>
           </button>
           <div className="tours__Overlay-bhr5fb-1 jzexuY" />
@@ -369,25 +474,25 @@ export default function Home() {
               Our services
             </h2>
             <ul className="services__List-ddmf7w-1 grYKsD">
-              <li className="services__Item-ddmf7w-2 hTXiu">
+              <li className="services__Item-ddmf7w-2 hTXiu" onClick={()=>{navigate('/contact')}}>
                 <div className="services__Img-ddmf7w-3 fwtetB" />
                 <p style={{fontSize:"16px"}}>Visa processing</p>
               </li>
-              <li className="services__Item-ddmf7w-2 hTXiu">
+              <li className="services__Item-ddmf7w-2 hTXiu" onClick={()=>{navigate('/contact')}}>
                 <div className="services__Img-ddmf7w-3 gdDHuq" />
                 <p style={{fontSize:"16px"}}>Registration of tours</p>
               </li>
-              <li className="services__Item-ddmf7w-2 hTXiu">
+              <li className="services__Item-ddmf7w-2 hTXiu" onClick={()=>{navigate('/contact')}}>
                 <div className="services__Img-ddmf7w-3 cGheSV" />
                 <p style={{fontSize:"16px"}}>Air Ticketing</p>
               </li>
-              <li className="services__Item-ddmf7w-2 hTXiu">
+              <li className="services__Item-ddmf7w-2 hTXiu" onClick={()=>{navigate('/contact')}}>
                 <div className="lcrnjC" />
                 <p style={{fontSize:"16px"}}>Abroad Study</p>
               </li>
-              <li className="services__Item-ddmf7w-2 hTXiu">
+              <li className="services__Item-ddmf7w-2 hTXiu" onClick={()=>{navigate('/contact')}}>
                 <div className="services__Img-ddmf7w-3 kQpRaS" />
-                <p style={{fontSize:"16px"}}>Immigration</p>
+                <p style={{fontSize:"16px"}} >Immigration</p>
               </li>
             </ul>
           </div>

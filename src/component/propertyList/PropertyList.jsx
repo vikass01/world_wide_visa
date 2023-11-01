@@ -1,9 +1,11 @@
 import "./propertyList.css";
+import { useNavigate } from "react-router-dom";
 
 const PropertyList = () => {
+  const navigate = useNavigate();
   return (
     <div className="pList">
-      <div className="pListscroll">
+      <div className="pListscroll" onClick={()=>navigate('/hotelsid')}>
       <div className="pListItem">
         <img
           src="https://assets.traveltriangle.com/blog/wp-content/uploads/2017/02/Malaysia.jpg"

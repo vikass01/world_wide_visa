@@ -15,6 +15,7 @@
   align-items: center;
   width: 1000%;
   padding: 0px 3px;
+  cursor: pointer;
 }
 
 .fpItem{

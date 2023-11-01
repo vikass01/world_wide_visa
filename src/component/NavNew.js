@@ -105,21 +105,21 @@ export default function NavNew() {
                   <div className="rowbox1">
                       <div className="acolumn">
                         <h6>Category 1</h6>
-                        <a href="#">Tourist</a>
-                        <a href="#">Business</a>
-                        <a href="#">Work</a>
+                        <Link to="/contact">Tourist</Link>
+                        <Link to="/contact">Business</Link>
+                        <Link to="/contact">Work</Link>
                       </div>
                       <div className="acolumn">
                         <h6>Category 2</h6>
-                        <a href="#">Electronic</a>
-                        <a href="#">Study</a>
-                        <a href="#">Medical</a>
+                        <Link to="/contact">Electronic</Link>
+                        <Link to="/contact">Study</Link>
+                        <Link to="/contact">Medical</Link>
                       </div>
                       <div className="acolumn">
                         <h6>Category 3</h6>
-                        <a href="#">China Group</a>
-                        <a href="#">CubaCard</a>
-                        <a href="#">Group Visa</a>
+                        <Link to="/contact">China Group</Link>
+                        <Link to="/contact">CubaCard</Link>
+                        <Link to="/contact">Group Visa</Link>
                       </div>
                   </div>
                   
@@ -137,21 +137,21 @@ export default function NavNew() {
                   <div className="rowbox1">
                       <div className="acolumn">
                         <h6>Category 1</h6>
-                        <a href="#">Australia</a>
-                        <a href="#">Canada</a>
-                        <a href="#">NewZealand</a>
+                        <Link to="/contact">Australia</Link>
+                        <Link to="/contact">Canada</Link>
+                        <Link to="/contact">NewZealand</Link>
                       </div>
                       <div className="acolumn">
                         <h6>Category 2</h6>
-                        <a href="#">USA</a>
-                        <a href="#">UK</a>
-                        <a href="#">Germany</a>
+                        <Link to="/contact">USA</Link>
+                        <Link to="/contact">UK</Link>
+                        <Link to="/contact">Germany</Link>
                       </div>
                       <div className="acolumn">
                         <h6>Category 3</h6>
-                        <a href="#">Asia</a>
-                        <a href="#">Europe</a>
-                        <a href="#">Hong Kong</a>
+                        <Link to="/contact">Asia</Link>
+                        <Link to="/contact">Europe</Link>
+                        <Link to="/contact">Hong Kong</Link>
                       </div>
                   </div>
                   <div className="rowbox2">

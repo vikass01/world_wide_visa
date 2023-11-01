@@ -92,7 +92,7 @@ const Header = ({ type }) => {
                         placeholder="Where are you going?"
                         className="headerSearchInput"
                         onChange={(e) => setDestination(e.target.value)}
-                      />
+                        autocomplete="on" />
                     </div>
               
                     <div className="headerSearchItem">

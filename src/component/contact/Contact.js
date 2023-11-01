@@ -5,13 +5,13 @@ import emailjs from '@emailjs/browser';
 export default function Contact() {
 
   const [name, setname] = useState("");
-  const [lname, setlname] = useState("");
   const [email, setemail] = useState("");
   const [mobile, setmobile] = useState("");
-  const [msg, setmsg] = useState("");
-  const [form, setform] = useState(true);
   const [lastqueries, setlastqueries] = useState(false);
   const [requ, setrequ] = useState("");
+  const [query, setquery] = useState("");
+  const [adress, setadress] = useState("");
+  const [msg, setmsg] = useState("");
 
 
 
@@ -21,11 +21,12 @@ export default function Contact() {
       e.preventDefault();
       setTimeout(() => {
         setname("")
-        setlname("")
+        setadress("")
         setemail("")
         setmobile("")
         setmsg("")
         setrequ("")
+        setquery("")
       }, 1000);
   
       emailjs.sendForm('service_p73cw28', 'template_l8h877l', forms.current, 'D5-RldC84sFFtvfSt')
@@ -40,43 +41,71 @@ export default function Contact() {
      
 
 
+      let queries = localStorage.getItem("queries")
+      if (queries===null){
+        queries=[]
+      }else{
+        queries = JSON.parse(localStorage.getItem("queries"))
+      }
+
+
+
+
+      var acc = document.querySelectorAll(".accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      }
+
+
+
+ 
+
 
   
-
-
-
- useEffect(()=>{
-
-
   
+  // let queries;
+  // const huyg = document.querySelector(".bnhui")
   
-  let queries;
-  const huyg = document.querySelector(".bnhui")
-  
-  const localdata = localStorage.getItem("queries")
-  if (localdata===null){
-    queries=[]
-  }else{
-    queries = JSON.parse(localStorage.getItem("queries"))
-  }
+  // const localdata = localStorage.getItem("queries")
+  // console.log(localdata)
+  // if (localdata===null){
+  //   queries=[]
+  // }else{
+  //   queries = JSON.parse(localStorage.getItem("queries"))
+  // }
  
 
   
 
-  queries.forEach(element => {
-    huyg.insertAdjacentHTML("beforeend", `<button class="accordion">Date: ${element.date}</button>
-    <div class="panel">
-      <span>Name: ${element.name} ${element.lastName}</span>
-      <span> Email:${element.email}</span>
-      <span> Contact:${element.mobile}</span>
-      <p> Your Query:${element.msg}</p>
+  // queries.forEach(element => {
+
+  //   console.log(element)
+  //   huyg.insertAdjacentHTML("beforeend", `element.name
+  //   <button class="accordion">Date: ${element.date}</button>
+  //   <div class="panel">
+  //     <span>Name: ${element.name}</span>
+  //     <span> Email:${element.email}</span>
+  //     <span> Contact:${element.mobile}</span>
+  //     <span> Contact:${element.query}</span>
+  //     <span> Contact:${element.adress}</span>
+  //     <p> Your Query:${element.msg}</p>
       
-    </div>`)
+  //   </div>`)
     
-  });
+  // });
 
 
- },[])
+
 
 
 
@@ -92,32 +121,32 @@ export default function Contact() {
 //   }
 
 
-var acc = document.getElementsByClassName("accordion");
-var i;
+// var acc = document.getElementsByClassName("accordion");
+// var i;
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
-  });
-}
+// for (i = 0; i < acc.length; i++) {
+//   acc[i].addEventListener("click", function() {
+//     this.classList.toggle("active");
+//     var panel = this.nextElementSibling;
+//     if (panel.style.display === "block") {
+//       panel.style.display = "none";
+//     } else {
+//       panel.style.display = "block";
+//     }
+//   });
+// }
 
   
     
 
   const lastquery = ()=>{
-    setform(false)
     setlastqueries(true)
     
   }
 
   function queryclose(){
-    setform("hidden")
+    setlastqueries(false)
+
   }
 
   function clearall(){
@@ -140,10 +169,11 @@ for (i = 0; i < acc.length; i++) {
 
     const querydata = {
       name:name,
-      lastName : lname,
       email : email,
       mobile : mobile,
       msg : msg,
+      query:query,
+      adress: adress,
       date: new Date().toLocaleString()
     }
 
@@ -204,9 +234,9 @@ for (i = 0; i < acc.length; i++) {
             </ul>
           </div>
 
-      { form && 
-          <form ref={forms} onSubmit={sendEmail} id={form? "": form}>
-          <div className={"contactForm1"}>
+      { !lastqueries && 
+          <form ref={forms} onSubmit={sendEmail}>
+          <div className={"contactForm1"} >
             <h2>Send a Message | Apply for Visa | Apply for study abroad</h2>
             <span>Contact us | Raise queries | Immigration support</span>
             <div className="formBox">
@@ -226,7 +256,7 @@ for (i = 0; i < acc.length; i++) {
               
               <div className="inputBox w50">
 
-                    <select name="productoptions" id="products">
+                    <select name="user_query" id="products" value={query} onChange={(event)=>{setquery(event.target.value)}}>
                       <option value="">Select your query</option>
                       <option value="visa">Visa</option>
                       <option value="study">Study</option>
@@ -237,11 +267,11 @@ for (i = 0; i < acc.length; i++) {
                
               </div>
               <div className="inputBox w100">
-                <input type="text" value={lname} name='user_lName' onChange={(event)=>{setlname(event.target.value)}} required />
+                <input type="text" value={adress} name='user_address' onChange={(event)=>{setadress(event.target.value)}} required />
                 <span>Address</span>
               </div>
               <div className="inputBox w100">
-                <textarea required defaultValue={msg} name='user_msg' onChange={(event)=>{setmsg(event.target.value)}} />
+                <textarea required value={msg} name='user_msg' onChange={(event)=>{setmsg(event.target.value)}} />
                 <span>Write your message here...</span>
               </div>
               <div className="inputBox w100">
@@ -256,13 +286,32 @@ for (i = 0; i < acc.length; i++) {
 
           {/* 00000000000000000000000000000000000000000000000000000000 */}
               {lastqueries && 
-                      <div className="contactForm2" id={form}>
+                      <div className="contactForm2" >
 
 
                                 <div className="ghjg"><button onClick={clearall}>Clear All</button><button onClick={queryclose}>Close</button></div>
                                 
 
                                   <div className='bnhui'> 
+                                  {lastqueries && queries.map((element, ind)=>{
+
+                                    return <div key={"key"+ind} ><button  className="accordion">{element.date}</button>
+                                          <div className="panel">
+                                            <span>Name: {element.name}</span><br/>
+                                            <span>Email: {element.email}</span><br/>
+                                            <span>Contact: {element.mobile}</span><br/>
+                                            <span>Your enquiry about: {element.query}</span><br/>
+                                            <span>Address: {element.adress}</span><br/>
+                                            <p>Query Text: {element.msg}</p><br/>
+                                          </div>
+                                          </div>
+
+                                  })}
+
+                                         
+                                         
+
+                                          
 
                                     {/* <button className="accordion">Date</button>
                                     <div className="panel">

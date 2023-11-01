@@ -10,8 +10,9 @@
   width: 100%;
   overflow-x: scroll;
   padding: 10px 5px;
-  background-color: #fafafa;
+  /* background-color: #fafafa; */
   text-align: center;
+  cursor: pointer;
 }
 
 .djkld{
@@ -88,7 +89,7 @@
   .caLgOF {
     padding: 30px;
     color: #fff;
-    background-color: #141e30;
+    background-color: #ff9818;
     font-size: 16px;
     border: none;
     /* border-radius: 40px; */
@@ -148,17 +149,25 @@
   
 }
 
-@media  (min-width: 0px) and (max-width: 414px) {
+@media  (min-width: 0px) and (max-width: 449px) {
   .ehlOuW {
     display: none;
   }
+  .dess{
+    display: none;
+  }
+
 }
 
 
 
 
-@media  (min-width: 415px) and (max-width: 20000px) {
+@media  (min-width: 450px) and (max-width: 20000px) {
   .ghjjk {
+    display: none;
+  }
+
+  .mobb{
     display: none;
   }
 }
@@ -225,7 +234,13 @@
   .kELZqj {
     height: auto;
     padding: 20px 15px;
-    background-color: #fafafa;
+    text-align: center;
+  }
+
+  .kELZq {
+    height: auto;
+    padding: 20px 15px;
+    /* background-color: #cac6c6; */
     text-align: center;
   }
   /* sc-component-id: continents__Title-mu4rdf-1 */
@@ -476,7 +491,7 @@
   .kYYayU {
     padding: 30px;
     color: #fff;
-    background-color: #141e30;
+    background-color: #ff9818;
     font-size: 20px;
     border: none;
     border-radius: 40px;
@@ -554,6 +569,7 @@
     max-width: 150px;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
+    cursor: pointer;
   }
   .hTXiu:hover {
     -webkit-transform: translateY(-10px);
@@ -959,6 +975,7 @@
     font-size: 100%;
     line-height: 1.15;
     margin: 0;
+    border-radius: 10px;
   }
   button,
   input {
@@ -1130,11 +1147,11 @@
     width: 800px;
   }
   .newSwiper .swiper-slide {
-    height: 177px;
+    height: 300px;
     background: #882525;
     line-height: 300px;
     text-align: center;
-    background-image: url("https://www.immigrationxperts.com/wp-content/themes/immigrationxperts/images/TOURIST-VISA.jpg");
+    background-image: url("https://images.click.in/classifieds/images/116/17_02_2020_17_42_53_3e1e1167829e31c24ca33aa94235f7f2_ly39i5rue7.jpg");
     background-position: center;
     background-size: contain;
     border: 1px solid black;
@@ -1143,7 +1160,7 @@
   }
   .newSwiper .swiper-slide:nth-child(2) {
     background: #8acc7d;
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLYw12qEBh34app-98MW5ADsSHKgVaGYjDAg&usqp=CAU");
+    background-image: url("https://i0.wp.com/kpadhne.com/wp-content/uploads/2023/01/Australia-Work-Visa-2023-Work-Permit-Coast-Eligiblity.jpg?fit=940%2C788&ssl=1");
     background-position: center;
     background-size: contain;
     
@@ -1155,38 +1172,39 @@
     background-size: contain;
   }
   .newSwiper .swiper-slide:nth-child(4) {
-    background: #9eb75c;
-    background-image: url("https://siuk-india.s3.amazonaws.com/assets/study-guide/priority-super-priority-student-visa.jpg");
+    background: #fff;
+    background-image: url("https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs2/131014070/original/c694072bf3de317b949961591a0912cd943e6dbf/provide-uk-tourist-and-immigration-help-services.jpg");
     background-position: center;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
   .newSwiper .swiper-slide:nth-child(5) {
     background: #7da8cc;
-    background-image: url("https://iraimmigration.com/upload/service/5cd67784367080915604b404f1671d5e.png");
-    background-position: center;
-    background-size: contain;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaxCLLJY14b1biwfvv3BZkutCLDOlAQQ_xBvr0etPjVJfZeeYTWK8Or27Mu7vqc2yXano&usqp=CAU");
+    background-position: cover;
+    background-size: cover;
   }
   .newSwiper .swiper-slide:nth-child(6) {
     background: #96cc7d;
-    background-image: url("https://www.visasoftheworld.in/blog/wp-content/uploads/2017/07/German-Visa-Information-1024x614.jpg");
-    background-position: center;
+    background-image: url("https://germanyworkvisa.files.wordpress.com/2017/11/germany-work-visa.jpg");
+    background-position: contain;
     background-size: cover;
   }
   .newSwiper .swiper-slide:nth-child(7) {
     background: #cc7dae;
-    background-image: url("https://www.goindigo.in/content/dam/indigov2/6e-website/header/visa/hong-kong-hk-visa-mweb.jpg");
-    background-position: center;
-    background-size: contain;
+    background-image: url("https://media.licdn.com/dms/image/C5112AQGOuxr0KsYTGw/article-cover_image-shrink_600_2000/0/1571826306518?e=2147483647&v=beta&t=rS7QbXDtQg8X8xq3OCu72VlplwwLg13VFPoRUNYNW0c");
+    background-position: left;
+    background-size: cover;
   }
   .newSwiper .swiper-slide:nth-child(8) {
     background: #c02183;
-    background-image: url("https://blog.raynatours.com/wp-content/uploads/2019/01/Poland-Visa-From-Dubai.jpg");
+    background-image: url("https://images.locanto.me/Poland-Work-permit-multiple-visa-2023/vap_5370619169.jpg");
     background-position: center;
     background-size: contain;
   }
   .newSwiper .swiper-slide:nth-child(9) {
     background: #5f0a3e;
-    background-image: url("https://miro.medium.com/v2/resize:fit:1400/1*1SQXVZH3kzUfe_Hh-R9Usw.png");
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvK_duvBYmiueJ9QmTrpkqDkjkBtESfsybI2BgqZgmEn7ExZTL0qtSFEDoVxeWtb9pTM0&usqp=CAU");
     background-position: center;
     background-size: contain;
   }

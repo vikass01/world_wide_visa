@@ -1,9 +1,10 @@
 import "./featuredProperties.css";
-
+import { useNavigate } from "react-router-dom";
 const FeaturedProperties = () => {
+  const navigate = useNavigate();
   return (
     <div className="fp">
-      <div className="fpscroll">
+      <div className="fpscroll" onClick={()=>navigate('/hotelsid')}>
       <div className="fpItem">
         <img
           src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/06/6a/c4/f0.jpg"

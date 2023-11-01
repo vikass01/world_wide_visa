@@ -11,10 +11,12 @@ import {
   faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Hotel = () => {
   const [slideNumber, setSlideNumber] = useState(0);
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
 
   const photos = [
     {
@@ -82,8 +84,8 @@ const Hotel = () => {
           </div>
         )}
         <div className="hotelWrapper">
-          <button className="bookNow">Reserve or Book Now!</button>
-          <h1 className="hotelTitle">Tower Street Apartments</h1>
+          <button className="bookNow" onClick={()=>navigate('/contact')}>Reserve or Book Now!</button>
+          <h1 className="hotelTitle">Super Delux Complimantry Room</h1>
           <div className="hotelAddress">
             <FontAwesomeIcon icon={faLocationDot} />
             <span>Elton St 125 New york</span>
@@ -132,7 +134,7 @@ const Hotel = () => {
               <h2>
                 <b>$945</b> (9 nights)
               </h2>
-              <button>Reserve or Book Now!</button>
+              <button onClick={()=>navigate('/contact')}>Reserve or Book Now!</button>
             </div>
           </div>
         </div>

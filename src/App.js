@@ -32,7 +32,7 @@ function App() {
         <Route exect path="/about" element={<About />} />
         <Route exect path="/tours" element={<Tours />} />
         <Route exect path="/hotels" element={<List />} />
-        <Route exect path="/hotels/:id" element={<Hotel />} />
+        <Route exect path="/hotelsid" element={<Hotel />} />
         {/* <Route exect path="/index" element={<Home />}/> */}
         <Route exect path="/" element={ <Home/>}/>
         <Route exect path="/contact" element={<Contact />} />
