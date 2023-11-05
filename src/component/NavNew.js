@@ -11,6 +11,56 @@ export default function NavNew() {
 
   const [progress, setProgress] = useState(0);
   const [mobsub, setmobsub] = useState(false);
+  const [studyeu, setstudyeu] = useState(true);
+  const [studyas, setstudyas] = useState(false);
+  const [subnavEurope, setsubnavEurope] = useState(false);
+  const [subnavAssia, setsubnavAssia] = useState(false);
+  const [studybox, setstudybox] = useState(false);
+  
+
+
+  const showstudyeu=()=>{
+    setstudyeu(true)
+    setstudyas(false)
+
+  }
+
+  const showstudyas=()=>{
+    setstudyeu(false)
+    setstudyas(true)
+
+  }
+
+  const vbdsf =()=>{
+    setTimeout(() => {
+      setsubnavAssia(false)
+      setsubnavEurope(false)
+      setstudybox(false)
+    }, 30000);
+  }
+
+  const openEurope=()=>{
+    setsubnavEurope(true)
+    setsubnavAssia(false)
+    vbdsf()
+
+  }
+
+  const openAsiaa=()=>{
+    setsubnavAssia(true)
+    setsubnavEurope(false)
+    vbdsf()
+
+  }
+
+  const openStudybox=()=>{
+    setstudybox(true)
+    vbdsf()
+    
+  }
+
+  
+
   
   return (
     <>
@@ -132,34 +182,41 @@ export default function NavNew() {
           <div className="adropdown-content">
                 <div className="aheader">
                   <h6>WELCOME TO BRIGHT FUTURE ABROAD STUDIES</h6>
+                  <button className="studybtns" onClick={showstudyeu} style={{backgroundColor:`${studyeu ? "#ff9818": ""}` }}>MBBS in Europe</button>
+                  <button className="studybtns" onClick={showstudyas} style={{backgroundColor:`${!studyeu ? "#ff9818": ""}` }}>MBBS in Asia</button>
                 </div>
-              <div className="arow">
+
+
+          {/* 00000000000000000000 study europe 0000000000000000000000000000000000000000 */}
+              {studyeu && 
+              <div className="arow " id="studyeurope">
                   <div className="rowbox1">
                       <div className="acolumn">
                         <h6>Category 1</h6>
-                        <Link to="/contact">Australia</Link>
-                        <Link to="/contact">Canada</Link>
-                        <Link to="/contact">NewZealand</Link>
+                        <Link to="/mbbsinrussia">MBBS in Russia</Link>
+                        <Link to="/mbbsingermany">MBBS in Germany</Link>
+                        <Link to="/mbbsinkazakhstan">MBBS in Kazakhstan</Link>
+                        
                       </div>
                       <div className="acolumn">
                         <h6>Category 2</h6>
-                        <Link to="/contact">USA</Link>
-                        <Link to="/contact">UK</Link>
-                        <Link to="/contact">Germany</Link>
+                        <Link to="/mbbsingeorgia">MBBS in Georgia</Link>
+                        <Link to="/mbbsinpoland">MBBS in Poland</Link>
+                        <Link to="/mbbsinmoldova">MBBS in Moldova</Link>
                       </div>
                       <div className="acolumn">
                         <h6>Category 3</h6>
-                        <Link to="/contact">Asia</Link>
-                        <Link to="/contact">Europe</Link>
-                        <Link to="/contact">Hong Kong</Link>
+                        <Link to="/mbbsinserbia">MBBS in Serbia</Link>
+                        <Link to="/mbbsinnepal">MBBS in Nepal</Link>
+                        <Link to="/mbbsinitaly">MBBS in Italy</Link>
                       </div>
                   </div>
                   <div className="rowbox2">
                           <div className="scroll-container">
-                          <img src="https://ngs-space1.sgp1.digitaloceanspaces.com/am/uploads/mediaGallery/image/1668670929290.jpg-org" alt="Cinque Terre"/>
-                          <img src="https://admission.buddy4study.com/study-abroad/wp-content/uploads/2019/08/mbbs-abroad.jpg" alt="Forest"/>
-                          <img src="https://www.neweraeducation.in/assets/images007/blog/how-to-select-your-university-for-mbbs-abroad.webp" alt="Northern Lights"/>
-                          <img src="https://media.istockphoto.com/id/1185326263/photo/happy-student-in-london.jpg?s=612x612&w=0&k=20&c=SQHdU5QJpdgZ65uYc-LkYIC1F-vgfEk5ID3kN3o8L-0=" alt="Mountains"/>
+                            <img src="https://ngs-space1.sgp1.digitaloceanspaces.com/am/uploads/mediaGallery/image/1668670929290.jpg-org" alt="Cinque Terre"/>
+                            <img src="https://admission.buddy4study.com/study-abroad/wp-content/uploads/2019/08/mbbs-abroad.jpg" alt="Forest"/>
+                            <img src="https://www.neweraeducation.in/assets/images007/blog/how-to-select-your-university-for-mbbs-abroad.webp" alt="Northern Lights"/>
+                            <img src="https://media.istockphoto.com/id/1185326263/photo/happy-student-in-london.jpg?s=612x612&w=0&k=20&c=SQHdU5QJpdgZ65uYc-LkYIC1F-vgfEk5ID3kN3o8L-0=" alt="Mountains"/>
                           </div>
                           <div className="scroll-container-text">
                               <h6>Study</h6>
@@ -167,12 +224,58 @@ export default function NavNew() {
                               <h6>Check Eligibility</h6>
                               <h6>View all</h6>
                           </div>
-                      
                   </div>
-            </div>
+            </div>}
+
+
+            {/* 00000000000000000000 study asia 0000000000000000000000000000000000000000 */}
+            {studyas && 
+            <div className="arow" id="studyasia">
+                  <div className="rowbox1">
+                      <div className="acolumn acolum">
+                        <h6>Category 1</h6>
+                        <Link to="/mbbsinkyrgyzstan">MBBS in Kyrgyzstan</Link>
+                        <Link to="/mbbsinuzbekistan">MBBS in Uzbekistan</Link>
+                        <Link to="/mbbsinbangladesh">MBBS in Bangladesh</Link>
+                      </div>
+                      <div className="acolumn acolum">
+                        <h6>Category 2</h6>
+                        <Link to="/mbbsinarmenia">Armenia</Link>
+                        {/* <Link to="/contact">UK</Link>
+                        <Link to="/contact">Germany</Link> */}
+                      </div>
+                  </div>
+                  <div className="rowbox2">
+                          <div className="scroll-container">
+                            <img src="https://ngs-space1.sgp1.digitaloceanspaces.com/am/uploads/mediaGallery/image/1668670929290.jpg-org" alt="Cinque Terre"/>
+                            <img src="https://admission.buddy4study.com/study-abroad/wp-content/uploads/2019/08/mbbs-abroad.jpg" alt="Forest"/>
+                            <img src="https://www.neweraeducation.in/assets/images007/blog/how-to-select-your-university-for-mbbs-abroad.webp" alt="Northern Lights"/>
+                            <img src="https://media.istockphoto.com/id/1185326263/photo/happy-student-in-london.jpg?s=612x612&w=0&k=20&c=SQHdU5QJpdgZ65uYc-LkYIC1F-vgfEk5ID3kN3o8L-0=" alt="Mountains"/>
+                          </div>
+                          <div className="scroll-container-text">
+                              <h6>Study</h6>
+                              <h6>Apply for abroad</h6>
+                              <h6>Check Eligibility</h6>
+                              <h6>View all</h6>
+                          </div>
+                  </div>
+            </div>}
+
+
+
+
+
+
+
+
+
+
+
+
+
           </div>
         </div>
-        <Link to="/tours">Tour</Link>
+        <Link to="/tours">Tour Destinations</Link>
         <Link to="/contact">Contact</Link>
         <a className= "cgtpn" href="#news"><i className="fa-regular fa-user"></i></a>
         
@@ -189,17 +292,54 @@ export default function NavNew() {
         {/* <Link onClick={() => setProgress(100)} to="/" ><i className="fa-solid fa-bars"></i></Link> */}
         <div className="subnav">
           <button className="subnavbtn" onClick={()=>{setmobsub(true)}}><i className="fa-solid fa-bars"/></button>
-
-        {mobsub && 
+          </div>
+             {mobsub && 
           <div className="subnav-content">
+            <div className="gksqjxi hjpysg">
             <Link to="/" onClick={()=>{setmobsub(false)}}>Home</Link>
             <Link to="/about" onClick={()=>{setmobsub(false)}}>About</Link>
-            <Link to="/tours" onClick={()=>{setmobsub(false)}}>Tours</Link>
-            <Link to="/contact" onClick={()=>{setmobsub(false)}}>Contact</Link>
-          </div>
-        }
+            <Link to="/about" onClick={()=>{setmobsub(false)}}>Visa</Link>
+            <Link onClick={openStudybox}>Study<i className="fa-solid fa-angle-down"></i> </Link>
+            </div>
+            
+             {studybox &&   
+            <div className="gksqjxi subnav-study" >
+            <Link  onClick={openEurope}>MBBS In Europe <i className="fa-solid fa-angle-down"></i></Link>
+            <Link  onClick={openAsiaa}>MBBS In Asia <i className="fa-solid fa-angle-down"></i></Link>
+            </div>} 
 
-        </div>
+             {subnavEurope &&          
+            <div className="gksqjxi subnaVeurope" >
+            <Link to="/mbbsingermany" onClick={()=>{setmobsub(false)}}>MBBS in Germany</Link>
+            <Link to="/mbbsinkazakhstan" onClick={()=>{setmobsub(false)}}>MBBS in Kazakhstan</Link>
+            <Link to="/mbbsingeorgia" onClick={()=>{setmobsub(false)}}>MBBS in Georgia</Link>
+            <Link to="/mbbsinpoland" onClick={()=>{setmobsub(false)}}>MBBS in Poland</Link>
+            <Link to="/mbbsinmoldova" onClick={()=>{setmobsub(false)}}>MBBS in Moldova</Link>
+            <Link to="/mbbsinserbia" onClick={()=>{setmobsub(false)}}>MBBS in Serbia</Link>
+            <Link to="/mbbsinnepal" onClick={()=>{setmobsub(false)}}>MBBS in Nepal</Link>
+            <Link to="/mbbsinitaly" onClick={()=>{setmobsub(false)}}>MBBS in Italy</Link>
+            <Link to="/mbbsinarmenia" onClick={()=>{setmobsub(false)}}>MBBS in Armenia</Link>
+            </div>}
+
+             {subnavAssia &&         
+            <div className="subnav-asia">
+            <Link to="/mbbsinkyrgyzstan" onClick={()=>{setmobsub(false)}}>MBBS in Kyrgyzstan</Link>
+            <Link to="/mbbsinuzbekistan" onClick={()=>{setmobsub(false)}}>MBBS in Uzbekistan</Link>
+            <Link to="/mbbsinbangladesh" onClick={()=>{setmobsub(false)}}>MBBS in Bangladesh</Link>
+            </div>}
+
+            <div className="cxksdfi">
+            <Link to="/gallery" onClick={()=>{setmobsub(false)}}>Gallery</Link>
+            <Link to="/tours" onClick={()=>{setmobsub(false)}}>Tour Destinations</Link>
+            <Link to="/contact" onClick={()=>{setmobsub(false)}}>Contact</Link>
+            </div>
+
+        </div>} 
+
+
+
+
+
       </div>
       </>
   )

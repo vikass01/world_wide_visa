@@ -142,7 +142,7 @@ export default function Navbar() {
                         <h3>Europe Countries</h3>
                         <a href="/">In Russia</a>
                         <a href="/">In Kazakhstan</a>
-                        <a href="/">In Georgia</a>
+                        <Link to="/mbbsingeorgia">In Georgia</Link>
                       </div>
                       <div className="column">
                         <h3>

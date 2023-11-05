@@ -208,7 +208,7 @@ export default function Contact() {
                 </li>
                 <li>
                   <span className='locationmail'></span>
-                  <span><a href="mailto: eng.vikas90@gmail.com">eng.vikas90@gmail.com</a></span>
+                  <span><a href="mailto: eng.vikas90@gmail.com">info@worldwide-visa.com</a></span>
                 </li>
                 <li>
                   <span className='locationnumber'></span>
@@ -262,6 +262,7 @@ export default function Contact() {
                       <option value="study">Study</option>
                       <option value="tour">Tours</option>
                       <option value="immigration">Immigration</option>
+                      <option value="immigration">Business Investor Program</option>
                     </select>
 
                
