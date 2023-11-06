@@ -276,6 +276,7 @@ export default function NavNew() {
           </div>
         </div>
         <Link to="/tours">Tour Destinations</Link>
+        <Link to="/gallery">Gallery</Link>
         <Link to="/contact">Contact</Link>
         <a className= "cgtpn" href="#news"><i className="fa-regular fa-user"></i></a>
         

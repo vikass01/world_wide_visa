@@ -83,7 +83,7 @@ export default function Russia() {
             </tr>
             <tr>
               <td>Average cost of stay (Fee included)</td>
-              <td>30-40 lakhs(Approx)</td>
+              <td>25-35 lakhs(Approx)</td>
             </tr>
             <tr>
               <td>Intake</td>

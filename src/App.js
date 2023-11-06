@@ -26,6 +26,7 @@ import Kyrgyzstan from "./component/universities/Kyrgyzstan";
 import Bangladesh from "./component/universities/Bangladesh";
 import Uzbekistan from "./component/universities/Uzbekistan";
 import Armenia from "./component/universities/Armenia";
+import Gallery from "./component/Gallery";
 
 
 
@@ -58,6 +59,7 @@ function App() {
         <Route exect path="/mbbsinbangladesh" element={<Bangladesh />} />
         <Route exect path="/mbbsinuzbekistan" element={<Uzbekistan />} />
         <Route exect path="/mbbsinarmenia" element={<Armenia />} />
+        <Route exect path="/gallery" element={<Gallery />} />
         {/* <Route exect path="/index" element={<Home />}/> */}
         <Route exect path="/" element={ <Home/>}/>
         <Route exect path="/contact" element={<Contact />} />

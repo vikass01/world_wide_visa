@@ -1,0 +1,89 @@
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
+
+.fgii{
+    padding: 15px 0px;
+ width: 80%;
+ margin: auto;
+}
+.hoiaa{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+}
+
+.hoiaa img{
+    width: 300px;
+    box-shadow: 5px 5px 20px black;
+   
+}
+
+.dnsdf{
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px 50px;
+    width: 98%;
+    background-color: #003580;
+    margin: 20px;
+
+}
+
+.dnsd{
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px 50px;
+    width: 98%;
+    background-color: #003580;
+    margin: 20px;
+
+}
+
+.dnsdf h2{
+   
+    width: 300px;
+    
+    font-weight: 600;
+    color: #fff;
+    
+
+}
+
+.dnsdf p{
+    width: 500px;
+    padding-left: 20px;
+    font-weight: 600;
+    color: #fff;
+    border-left: 2px solid blue;
+
+}
+
+@media (min-width:0px) and (max-width:450px){
+
+    .dnsdf{
+        background-color: #fff;
+        flex-wrap: wrap;
+    }
+
+    .dnsdf h2{
+        color: black;
+    }
+
+    .dnsdf p{
+        
+        color: black;
+    
+    }
+
+    .dnsd h3{
+        font-size: 15px;
+    }
+
+}
