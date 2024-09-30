@@ -17,7 +17,7 @@ export default function About() {
         <div className="qqcontainer text-center vertical-align">
           <h1 className="logo">
             {" "}
-            World Wide <strong>Visa</strong>
+            Mangalam Migration <strong>Services</strong>
           </h1>
           <br />
           <div className="aboutlogo" />
@@ -39,11 +39,11 @@ export default function About() {
         <div className="about-section">
           <h1>About Us Page</h1>
           <p>
-            World Wide Visa here We are a leading study abroad consultancy in
+          Mangalam Migration Services here We are a leading study abroad consultancy in
             India and abroad. We are a comprehensive solution for students,
             specializing in overseas MBBS education consultancy, documentation
             support and admissions consultancy. We help students find various
-            educational opportunities abroad. “World Wide Visa”helps ambitious
+            educational opportunities abroad. “Mangalam Migration Services” helps ambitious
             Indian students gain admission to top universities around the world.
             We help students choose the best option for their dream course and
             get admission in a top university abroad and in India. Our expert
@@ -139,11 +139,11 @@ export default function About() {
                 <i className="fa fa-desktop" />
                 <div className="service-title">
                   <h3>Expertise</h3>
-                  <h4>World Wide-visa</h4>
+                  <h4>Mangalam Migration Services</h4>
                 </div>
               </header>
               <p>
-                World Wide-visa has over 10 years of experience in the study
+              Mangalam Migration Services has over 10 years of experience in the study
                 abroad industry. Our team of experienced counselors are experts
                 in helping students choose the right course and institution,
                 prepare for the application process, and get a visa.
@@ -154,7 +154,7 @@ export default function About() {
                 <i className="fa fa-desktop" />
                 <div className="service-title">
                   <h3>Personalized attention</h3>
-                  <h4>World Wide-visa</h4>
+                  <h4>Mangalam Migration Services</h4>
                 </div>
               </header>
               <p>
@@ -168,7 +168,7 @@ export default function About() {
                 <i className="fa fa-desktop" />
                 <div className="service-title">
                   <h3>Wide network of partners</h3>
-                  <h4>World Wide-visa</h4>
+                  <h4>Mangalam Migration Services</h4>
                 </div>
               </header>
               <p>
@@ -183,7 +183,7 @@ export default function About() {
                 <i className="fa fa-desktop" />
                 <div className="service-title">
                   <h3> Affordability</h3>
-                  <h4>World Wide-visa</h4>
+                  <h4>Mangalam Migration Services</h4>
                 </div>
               </header>
               <p>
@@ -196,7 +196,7 @@ export default function About() {
                 <i className="fa fa-desktop" />
                 <div className="service-title">
                   <h3>Guarantee</h3>
-                  <h4>World Wide-visa.</h4>
+                  <h4>Mangalam Migration Services</h4>
                 </div>
               </header>
               <p>
@@ -210,7 +210,7 @@ export default function About() {
                 <i className="fa fa-desktop" />
                 <div className="service-title">
                   <h3>Trust Build</h3>
-                  <h4>World Wide-visa.</h4>
+                  <h4>Mangalam Migration Services</h4>
                 </div>
               </header>
               <p>

@@ -80,13 +80,13 @@ height: 600px;
 
  .aboutlogo{
 	margin: 20px 0px;
-	background-image: url("../images/mainLogo.svg");
+	background-image: url("../images/manglam.png");
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
 	border-radius: 10px;
 	
-	height: 68px;
+	height: 100px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
