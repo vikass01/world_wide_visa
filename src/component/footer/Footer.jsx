@@ -14,8 +14,8 @@ const Footer = () => {
             <div className="logohead">
                 <div className="footlogosection" >
                   <div className="footLogo"></div>
-                  <h3 style={{color:"#fff"}}>World Wide Visa Pvt. Ltd:</h3>
-                  <p style={{color:"#fff"}}>Corporate Office: <br/>Delhi: 123 tower 4, Laxmi Nagar, East Delhi, Delhi- 110091. <br/>Near abc, Street No. 5</p>
+                  <h3 style={{color:"#fff"}}>Mangalam Migration Services:</h3>
+                  <p style={{color:"#fff"}}>Corporate Office: <br/>Delhi: 16, 17, 38 and 39 , Sevak Park, Uttam Nagar, West Delhi, <br/>New Delhi - 110059 </p>
                 </div>
             </div>
       <div className="footlist">    

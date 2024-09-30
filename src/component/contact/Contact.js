@@ -202,17 +202,17 @@ export default function Contact() {
               <ul className="info">
                 <li>
                   <span className='locationicon'></span>
-                  <span>184 Ippokratous Street<br />
-                    Athens, Gr<br />
-                    11472</span>
+                  <span>16, 17, 38 and 39 , Sevak Park, <br />
+                  Uttam Nagar, West Delhi,<br />
+                  New Delhi - 110059</span>
                 </li>
                 <li>
                   <span className='locationmail'></span>
-                  <span><a href="mailto: eng.vikas90@gmail.com">info@worldwide-visa.com</a></span>
+                  <span><a href="mailto: eng.vikas90@gmail.com">mangalammigration<br/>@gmail.com</a></span>
                 </li>
                 <li>
                   <span className='locationnumber'></span>
-                  <span>98910-12345</span>
+                  <span>+91-87007-32669</span>
                 </li>
                 <li>
                   <span className='queryhistry'></span>

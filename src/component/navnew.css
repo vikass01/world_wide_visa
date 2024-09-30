@@ -99,7 +99,7 @@ i{
 
   .navlogomobile {
     display: flex;
-    background-image: url("./images/mainLogo.png");
+    background-image: url("./images/manglam.png");
     background-size: contain;
     background-repeat: no-repeat;
     /* background-color: #003580; */
@@ -110,11 +110,12 @@ i{
 
   .navlogodesktop {
     display: flex;
-    background-image: url("./images/mainLogo.png");
+    background-image: url("./images/manglam.png");
     background-size: contain;
     background-repeat: no-repeat;
     /* background-color: #003580; */
-    width: 220px;
+    position: relative;
+    min-width: 130px;
     height: 50px;
     margin: 10px 5px;
     /* background-color:firebrick; */
