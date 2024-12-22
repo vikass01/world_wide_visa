@@ -34,10 +34,10 @@ export default function Gallery() {
       original: "https://phoenixchd.com/wp-content/uploads/2021/02/mbbs-students.jpg",
       thumbnail: "https://phoenixchd.com/wp-content/uploads/2021/02/mbbs-students.jpg",
     },
-    {
-      original: "https://medipediaoverseas.com/blog/blogadmin/download/452we-at-medipedia-overseas-suggest-our-students-to-focus-on-mbbs-clinical-subjects.-practise-makes-the-doctor-perfect-who-saves-the-human-life..jpg",
-      thumbnail: "https://medipediaoverseas.com/blog/blogadmin/download/452we-at-medipedia-overseas-suggest-our-students-to-focus-on-mbbs-clinical-subjects.-practise-makes-the-doctor-perfect-who-saves-the-human-life..jpg",
-    },
+    // {
+    //   original: "https://medipediaoverseas.com/blog/blogadmin/download/452we-at-medipedia-overseas-suggest-our-students-to-focus-on-mbbs-clinical-subjects.-practise-makes-the-doctor-perfect-who-saves-the-human-life..jpg",
+    //   thumbnail: "https://medipediaoverseas.com/blog/blogadmin/download/452we-at-medipedia-overseas-suggest-our-students-to-focus-on-mbbs-clinical-subjects.-practise-makes-the-doctor-perfect-who-saves-the-human-life..jpg",
+    // },
     {
       original: "https://cache.careers360.mobi/media/article_images/2022/11/7/shutterstock_1342231466.jpg",
       thumbnail: "https://cache.careers360.mobi/media/article_images/2022/11/7/shutterstock_1342231466.jpg",
