@@ -1,8 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import ImageGallery from "react-image-gallery";
 import "./gallery.css";
+import { Gallery as GridGallery  } from "react-grid-gallery";
+import Lightbox from "react-image-lightbox";
+import "react-image-lightbox/style.css";
+import image1 from "../Airport_Drops/001.jpeg";
+import image2 from "../Airport_Drops/002.jpeg";
+import image3 from "../Airport_Drops/003.jpeg";
+import image4 from "../Airport_Drops/004.jpeg";
+import image5 from "../Airport_Drops/005.jpeg";
+import image6 from "../Airport_Drops/006.jpeg";
+import image7 from "../Airport_Drops/007.jpeg";
+import image8 from "../Airport_Drops/008.jpeg";
+import image9 from "../Airport_Drops/009.jpeg";
+import image11 from "../Airport_Drops/0011.jpeg";
+import image12 from "../Airport_Drops/0012.jpeg";
+import image13 from "../Airport_Drops/0013.jpeg";
+import image14 from "../Airport_Drops/0014.jpeg";
+import image15 from "../Airport_Drops/0015.jpeg";
+import image16 from "../Airport_Drops/0016.jpeg";
+
 
 export default function Gallery() {
+  const [index, setIndex] = useState(-1);
+
+
   const images = [
     {
       original: "https://www.en.etemaaddaily.com/pages/eduandjobs/656neet_pg_counselling.jpg",
@@ -42,6 +64,110 @@ export default function Gallery() {
     },
   ];
 
+  const imagez = [
+    {
+       src: image1,
+       width: 320,
+       height: 174,
+       isSelected: true,
+       caption: "After Rain (Jeshu John - designerspics.com)",
+    },
+    {
+       src: image2,
+       width: 320,
+       height: 212,
+       tags: [
+          { value: "Ocean", title: "Ocean" },
+          { value: "People", title: "People" },
+       ],
+       alt: "Boats (Jeshu John - designerspics.com)",
+    },
+    {
+       src: image3,
+       width: 320,
+       height: 212,
+    },
+    
+   {
+    src: image5,
+    width: 320,
+    height: 212,
+ },
+ {
+  src: image16,
+  width: 320,
+  height: 212,
+},
+ 
+{
+  src: image8,
+  width: 320,
+  height: 212,
+},
+{
+  src: image9,
+  width: 320,
+  height: 212,
+},
+// {
+//   src: image10,
+//   width: 320,
+//   height: 212,
+// },
+{
+  src: image11,
+  width: 320,
+  height: 212,
+},
+{
+  src: image12,
+  width: 320,
+  height: 212,
+},
+{
+  src: image13,
+  width: 320,
+  height: 212,
+},
+{
+  src: image14,
+  width: 320,
+  height: 212,
+},
+{
+  src: image15,
+  width: 320,
+  height: 212,
+},
+
+{
+  src: image4,
+  width: 320,
+  height: 212,
+},
+{
+  src: image6,
+  width: 320,
+  height: 212,
+},
+{
+  src: image7,
+  width: 320,
+  height: 212,
+},
+ ];
+
+ const currentImage = imagez[index];
+ const nextIndex = (index + 1) % imagez.length;
+ const nextImage = imagez[nextIndex] || currentImage;
+ const prevIndex = (index + imagez.length - 1) % imagez.length;
+ const prevImage = imagez[prevIndex] || currentImage;
+
+ const handleClick = (index, item) => setIndex(index);
+ const handleClose = () => setIndex(-1);
+ const handleMovePrev = () => setIndex(prevIndex);
+ const handleMoveNext = () => setIndex(nextIndex);
+
   return (
     <>
         <div className="dnsdf">
@@ -73,6 +199,38 @@ export default function Gallery() {
         <img src="https://brightfutureas.com/wp-content/uploads/2023/10/Meet-Our-Graduate-MBBS-Students-Abroad-8.png"></img>
         <img src="https://brightfutureas.com/wp-content/uploads/2023/10/Meet-Our-Graduate-MBBS-Students-Abroad-14.png"></img>
       </div>
+
+      <div className="dnsd" style={{display:'flex',flexDirection:'column'}}>
+        <h3 style={{ textAlign: "center", color: "#fff" }}>Students Dropping On Airport</h3>
+        <div>
+        <div className="gallery-container">
+  {imagez.map((img, idx) => (
+    <div key={idx} className="gallery-item" onClick={() => setIndex(idx)}>
+      <img
+        src={img.src}
+        alt={img.alt || `Image ${idx}`}
+        className="gallery-image"
+      />
+    </div>
+  ))}
+</div>
+
+</div>
+
+      </div>
+
+      {currentImage && (
+        <Lightbox
+          mainSrc={currentImage.src}
+          imageTitle={currentImage.caption}
+          nextSrc={imagez[(index + 1) % imagez.length].src}
+          prevSrc={imagez[(index + imagez.length - 1) % imagez.length].src}
+          onCloseRequest={handleClose}
+          onMovePrevRequest={handleMovePrev}
+          onMoveNextRequest={handleMoveNext}
+        />
+      )}
+      
     </>
   );
 }
