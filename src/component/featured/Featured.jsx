@@ -5,7 +5,7 @@ const Featured = () => {
   const navigate = useNavigate();
   return (
     <div className="featured">
-      <div className="featurescroll" onClick={()=>navigate('/hotelsid')}>
+      <div className="featurescroll" onClick={()=>navigate('/hotels')}>
       <div className="featuredItem">
           <img
             src="https://salviatravelsindia.com/wp-content/uploads/2020/10/minsk-wooden-Holy-Trinity-Church.jpg"

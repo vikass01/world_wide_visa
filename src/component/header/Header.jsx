@@ -17,7 +17,6 @@ import { useNavigate } from "react-router-dom";
 
 const Header = ({ type }) => {
   const [destination, setDestination] = useState("");
-  const [openDate, setOpenDate] = useState(false);
   const [date, setDate] = useState([
     {
       startDate: new Date(),
@@ -25,7 +24,6 @@ const Header = ({ type }) => {
       key: "selection",
     },
   ]);
-  const [openOptions, setOpenOptions] = useState(false);
   const [options, setOptions] = useState({
     adult: 1,
     children: 0,

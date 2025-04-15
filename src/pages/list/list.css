@@ -18,7 +18,7 @@
   border: 1px solid #a3a0a0;
   padding: 10px;
   border-radius: 10px;
-  position: sticky;
+  /* position: sticky; */
   top: 10px;
   height: 80vh;
 }
@@ -92,5 +92,20 @@
 @media  (min-width: 0px) and (max-width: 450px) {
   .listSearch {
     display: none;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .listWrapperr {
+    flex-direction: column;
+  }
+
+  .listSearch {
+    width: 100% !important;
+  }
+
+  .listResult {
+    grid-template-columns: 1fr !important;
   }
 }

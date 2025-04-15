@@ -1,10 +1,27 @@
+import { useState } from "react";
 import "./featuredProperties.css";
 import { useNavigate } from "react-router-dom";
+
 const FeaturedProperties = () => {
   const navigate = useNavigate();
+  const [destination, setDestination] = useState("");
+  const [date, setDate] = useState([
+      {
+        startDate: new Date(),
+        endDate: new Date(),
+        key: "selection",
+      },
+    ]);
+    const [options, setOptions] = useState({
+      adult: 1,
+      children: 0,
+      room: 1,
+    });
+
+
   return (
     <div className="fp">
-      <div className="fpscroll" onClick={()=>navigate('/hotelsid')}>
+      <div className="fpscroll" onClick={()=>navigate('/hotels', { state: { destination, date, options } })}>
       <div className="fpItem">
         <img
           src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/06/6a/c4/f0.jpg"
