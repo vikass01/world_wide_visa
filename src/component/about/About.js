@@ -41,7 +41,7 @@ export default function About() {
         <div
           style={{
             display: "flex",
-            flexWrap: "wrap",
+            flexDirection:'row',
             justifyContent: "space-between",
             maxWidth: "1400px",
             margin: "0 auto",
@@ -73,7 +73,9 @@ export default function About() {
           {/* Right Column Image */}
           <div
             style={{
-            }}
+              display:'flex',
+              flexDirection:'column'
+              }}
           >
             {/* Founders Section */}
             <h2
@@ -89,15 +91,16 @@ export default function About() {
             <div
               style={{
                 display: "flex",
-                flexWrap: "wrap",
-                justifyContent: "center",
+                flexDirection:'row',
+                // flexWrap: "wrap",
+                justifyContent: "space-between",
                 gap: "30px",
               }}
             >
               {/* Founder 1 */}
               <div
                 style={{
-                  width: "280px",
+                  width: "180px",
                   backgroundColor: "#fafafa",
                   borderRadius: "15px",
                   overflow: "hidden",
@@ -153,7 +156,7 @@ export default function About() {
               {/* Founder 2 */}
               <div
                 style={{
-                  width: "280px",
+                  width: "180px",
                   backgroundColor: "#fafafa",
                   borderRadius: "15px",
                   overflow: "hidden",
