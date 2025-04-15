@@ -1,129 +1,90 @@
-@import "~react-image-gallery/styles/css/image-gallery.css";
+/* gallery.css */
 
-
-.fgii{
-    padding: 15px 0px;
- width: 80%;
- margin: auto;
-}
-.hoiaa{
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-
-}
-
-.hoiaa img{
-    width: 300px;
-    box-shadow: 5px 5px 20px black;
-   
-}
-
-.dnsdf{
-    
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 20px 50px;
-    width: 98%;
-    background-color: #003580;
-    margin: 20px;
-
-}
-
-.dnsd{
-    
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 20px 50px;
-    width: 98%;
-    background-color: #003580;
-    margin: 20px;
-
-}
-
-.dnsdf h2{
-   
-    width: 300px;
-    
-    font-weight: 600;
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ccc;
     color: #fff;
-    
-
-}
-
-.dnsdf p{
-    width: 500px;
-    padding-left: 20px;
-    font-weight: 600;
-    color: #fff;
-    border-left: 2px solid blue;
-
-}
-
-/* Gallery Container */
-.gallery-container {
+  }
+  
+  .dnsdf {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    color: white;
+  }
+  
+  .dnsdf h2 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .dnsdf p {
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .dnsd {
+    padding: 2rem 1rem;
+  }
+  
+  .dnsd h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .gallery-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
-    gap: 15px; /* Space between items */
-    padding: 20px;
-    background-color: #f4f4f4; /* Light background for contrast */
-    border-radius: 8px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    padding: 0 1rem;
   }
   
-  /* Individual Gallery Items */
   .gallery-item {
-    position: relative;
+    cursor: pointer;
     overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 12px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #1e1e1e;
   }
   
-  /* Image Styling */
+  .gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.1);
+  }
+  
   .gallery-image {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     display: block;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
+    border-radius: 12px;
   }
   
-  /* Hover Effect on Gallery Item */
-  .gallery-item:hover {
-    transform: scale(1.05); /* Slight zoom effect */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Elevated shadow on hover */
+  /* Responsive tweaks */
+  @media screen and (max-width: 768px) {
+    .dnsdf h2 {
+      font-size: 1.8rem;
+    }
+  
+    .dnsdf p {
+      font-size: 0.9rem;
+    }
+  
+    .dnsd h3 {
+      font-size: 1.4rem;
+    }
   }
   
-  /* Hover Effect on Image */
-  .gallery-item:hover .gallery-image {
-    transform: scale(1.1); /* Additional zoom for image */
+  @media screen and (max-width: 480px) {
+    .dnsdf h2 {
+      font-size: 1.6rem;
+    }
+  
+    .gallery-container {
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
   }
   
-
-@media (min-width:0px) and (max-width:450px){
-
-    .dnsdf{
-        background-color: #fff;
-        flex-wrap: wrap;
-    }
-
-    .dnsdf h2{
-        color: black;
-    }
-
-    .dnsdf p{
-        
-        color: black;
-    
-    }
-
-    .dnsd h3{
-        font-size: 15px;
-    }
-
-}

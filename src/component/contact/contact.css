@@ -295,9 +295,8 @@
     font-size: 18px;
     font-weight: 300;
     color: #333;
-    border: none;
     outline: none;
-    border-bottom: 1px solid #777;
+    border: 1px solid #777;
 }
 
 .containercontact .contactForm1 .formBox .inputBox textarea 

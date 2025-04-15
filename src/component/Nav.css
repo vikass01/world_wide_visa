@@ -235,6 +235,7 @@
     height: auto;
     padding: 20px 15px;
     text-align: center;
+    background-color: #fff;
   }
 
   .kELZq {
@@ -249,6 +250,7 @@
     text-align: center;
     margin-top: 0;
     font-size: 50px;
+    color: black;
   }
   /* sc-component-id: continents__Wrapper-mu4rdf-2 */
   .dgFnke {
@@ -381,6 +383,7 @@
   }
   .dkhatj ul {
     margin-bottom: 30px;
+    color: black;
   }
   /* sc-component-id: biometrics__Title-sc-1qjc3xo-4 */
   .dynRLe {
@@ -388,7 +391,9 @@
     max-width: 400px;
     margin-top: 10px;
     margin-bottom: 10px;
+    color: black;
   }
+  
   @media (max-width: 723px) {
     .dynRLe {
       margin: 0 auto;
