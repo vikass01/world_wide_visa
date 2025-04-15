@@ -1,11 +1,25 @@
+import { useState } from "react";
 import "./featured.css";
 import { useNavigate } from "react-router-dom";
 
 const Featured = () => {
   const navigate = useNavigate();
+   const [destination, setDestination] = useState("");
+    const [date, setDate] = useState([
+        {
+          startDate: new Date(),
+          endDate: new Date(),
+          key: "selection",
+        },
+      ]);
+      const [options, setOptions] = useState({
+        adult: 1,
+        children: 0,
+        room: 1,
+      });
   return (
     <div className="featured">
-      <div className="featurescroll" onClick={()=>navigate('/hotels')}>
+      <div className="featurescroll" onClick={()=>navigate('/hotels', { state: { destination, date, options } })}>
       <div className="featuredItem">
           <img
             src="https://salviatravelsindia.com/wp-content/uploads/2020/10/minsk-wooden-Holy-Trinity-Church.jpg"
